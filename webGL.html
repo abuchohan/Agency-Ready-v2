@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+
+<head>
+    <meta charset="utf-8">
+    <title>Blog | WebGL </title>
+    <meta name="description" content="This is a collection of my blogs. You will find me thoughts and opinions on different topics also a blog on how i made this website also, what i did to optimize it. ">
+    <meta name="keywords" content="portfolio, web, developer, student, graduate, blog, technology, SEO">
+    <meta name="author" content="Abu-Hurairah Chohan">
+    <meta name="geo.placename" content="Manchester, UK" />
+    <meta name="geo.position" content="53.4807590;-2.2426310" />
+    <meta name="geo.region" content="GB-England" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="icon" type="image/icon" href="images/favIcons/favicon.ico" />
+    <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+</head>
+
+<body onload="InitDemo();">
+    
+<!-- Skiplinks -->
+<p class="skiplinks"> <a href="#content">Skip to content</a> <a href="#navigation">Skip to navigation</a> </p>
+
+
+    <!-- Navagation -->
+<nav role="navigation" id="navigation">
+        <div class="navigation">
+        <div class="navigation-logo"><a href="index.html"><img src="images/logo/logo-black.png" width="60" height="60" alt="My personal logo"></a></div>
+            <div class="navigation-items">
+        <div><a href="index.html" title="Landing page for my portfolio.">Home</a></div>
+        <div><a href="portfolio.html" title="Collection of my work. Including my Curriculum vitae.">Portfolio</a></div>
+        <div><a href="blog.html" title="How i created and developed this website.">Blog</a></div>
+        <div><a href="about.html" title="My career aspirations and experiences.">About</a></div>
+            </div>
+        </div>
+</nav>
+    
+<!-- Body Content -->
+<main class="page-content" id="content" role="main">
+
+<h1> WebGL </h1>
+<div class="blog">
+    <h2>Aim for this Project</h2>
+
+<p>To create a 3D object using OpenGL and Various Libraries.</p>
+    
+    <h2>Objectives</h2>
+    <p>To code a simple HTML page with a canvas.</p>
+<p>To implement a 3D object on this canvas with WebGL.</p>
+    
+        <a href="#game-surface">Go to the finished project here.</a>
+    <br><br>
+    <h2>What is WebGL?</h2>
+    
+    <p>WebGL or Web Graphics Library is the new standard for 3D graphics on the web. WebGL was designed for the purpose of rendering 2D and interactive 3D graphics. It is a JavaScript API that can be used with HTML5. WebGL code is written within the &lt;canvas&gt; tag of HTML5. It is a specification that allows Internet browsers access to Graphic Processing Units (GPUs) on those computers where they were used. (Tutorialpoint.com, 2018)</p>
+
+    <p>This was developed by a software engineer named Vladimir Vukicevic, He created the foundation and led the further development of WebGL. WebGL is open source meaning its free to use and develop for. This results in there being countless developers working with WebGL. Today, there is a big WebGL community making plugins and libraries to do all sort of things. <a>Three.js</a> is a very good resource to see what you can do with WebGL. It can be used to make games, visualise data and even make interactive page components. Without the user having to download a program to run!</p>
+
+
+<h2>My starting point</h2>
+
+<p>Starting this project, I have a proficient knowledge of JavaScript and HTML5. But other than that, I had no experience using WebGL.  I knew WebGL is based off JavaScript Thus making my current knowledge transferable. I knew this is what I want to strive for in my future endeavour thus making this project a great starting point. I was ready to dive into learning this. However, before doing so there is not really a limit on how this aim could be achieved as WebGL can get very complex. Taking this into consideration, from this project I wanted to gain an understanding of how WebGL works.</p>
+
+<h2>Tools and technologies used</h2>
+
+<p>To get started with WebGL you really don’t need much. It is natively built into modern day browsers such as Firefox, Chrome and Microsoft Edge. So, if you wanted to make something the console would defiantly be an option. The technology involved in making this project come to life was HTML5, JavaScript and gl.Matrix (a WebGL framework). As for the tools I used Brackets as my primary text editor and photoshop to make the texture.</p>
+    
+    <img src="images/blog-images/tools-used-WebGL.png" width="1341" height="600" alt="logos of brackets, photoshop html5 and javascript"> 
+
+
+    <h2>How did i make this?</h2>
+    <p>Coming from only doing front-end development I had to learn the basics of WebGL. I was asking questions such as how does it work? I did some reading around and came across this image of a graphic pipelin</p>
+    
+    <img src="images/blog-images/graphics-pipeline.png" width="800" height="600" alt="map of what elements webGL uses to render a object">
+    
+    <p>These were the steps that needed to be undertaken to render a 3D object. To initialize webGL I used...(Figure 1)</p>
+    
+    <pre><code> *Figure 1* <br><br>  var gl = canvas.getContext("webgl"); <br> And adding fall backs to support older browsers <br> gl = canvas.getContext("experimental-webgl");  </code></pre>
+    
+    <p>After initialising WebGL, I created some fall backs to tell the user if WebGL has been initialised. This was done through various if statements, during this part previous knowledge of JavaScript really helped. (Figure 2)</p>
+    
+    <pre><code>*Figure 2* <br><br> // adding supports for older browers <br>
+if (!gl) { <br>
+    console.log("Reverting to fallback" );<br>
+gl = canvas.getContext("experimental-webgl"); <br>
+
+}<br>
+
+// if webgl can not be got send alert <br>   
+if (!gl) {<br>
+    window.alert("You need to change browser to view this project") </code></pre>
+    
+    <p>My vertex shade consisted of a lot of elements. I also used a framework called <a href="http://glmatrix.net/">gl.Matrix</a> and what this does is the Math. The attributes I had in this shade what the position of the object and the texture coordinates, the vec3 and vec2 stand for the dimension the attribute is working in. In this case, the texture coordinates are a 2D element. The uniform elements don’t change as they are passed through the shader. Mat4 means there is a 4x4 matrix that is being used. Helpful documentation about this can be found <a href="http://glmatrix.net/docs/module-mat4.html">here</a> as this was an external resource. Then giving a position to the element with some calculations. This shader will be passed on to the fragment shader along with other parameters. (Figure 3)</p>
+    
+    <pre><code>*Figure  3* <br><br> var vertexShaderText = <br>
+[<br>
+    'precision mediump float;',<br>
+    '',<br>
+    'attribute vec3 vertPosition;',<br>
+    'attribute vec2 vertTexCoord;',<br>
+    'varying vec2 fragTexCoord;',<br>
+    'uniform mat4 mWorld;',<br>
+    'uniform mat4 mView;',<br>
+    'uniform mat4 mProj;',<br>
+    '',<br>
+    'void main()',<br>
+    '{',<br>
+    '  fragTexCoord = vertTexCoord;',<br>
+    '  gl_Position = mProj * mView * mWorld * vec4(vertPosition, 1.0);',<br>
+    '}'<br>
+].join('\n');</code></pre>
+    
+    <p>I needed to create a program to bring all the shaders into one place and again adding fall backs incase there was a problem linkning them. (Figure 4)</p>
+    
+    <pre><code> *Figure 4* <br><br>   // makiung the program, bringing all the shaders in one peice<br>
+    var program = gl.createProgram();<br>
+    gl.attachShader(program, vertexShader);<br>
+    gl.attachShader(program, fragmentShader);<br>
+    gl.linkProgram(program);<br>
+    if (!gl.getProgramParameter(program, gl.LINK_STATUS)) {<br>
+console.error("error linking program, something went wrong", gl.getProgramInfoLog(program));<br>
+return;<br>
+    }</code></pre>
+
+<p>To plot the cube on the canvas vertices are needed to give the fragment shader to render the object. In this case it will be stored on the ram after it is declared. As webGL can only render in points lines or triangles, this cube will be made of triangles. (Figure 5)</p>
+    
+    <pre><code> *Figure 5* <br><br>// this will be stored on the RAM  <br>
+	var boxVertices = <br>
+[ // X, Y, Z           U, V<br>
+		// Top<br>
+		-1.0, 1.0, -1.0,   0, 0,<br>
+		-1.0, 1.0, 1.0,    0, 1,<br>
+		1.0, 1.0, 1.0,     1, 1,<br>
+		1.0, 1.0, -1.0,    1, 0,<br>
+
+		// Left<br>
+		-1.0, 1.0, 1.0,    0, 0,<br>
+		-1.0, -1.0, 1.0,   1, 0,<br>
+		-1.0, -1.0, -1.0,  1, 1,<br>
+		-1.0, 1.0, -1.0,   0, 1,<br>
+
+		// Right<br>
+		1.0, 1.0, 1.0,    1, 1,<br>
+		1.0, -1.0, 1.0,   0, 1,<br>
+		1.0, -1.0, -1.0,  0, 0,<br>
+		1.0, 1.0, -1.0,   1, 0,<br>
+
+		// Front<br>
+		1.0, 1.0, 1.0,    1, 1,<br>
+		1.0, -1.0, 1.0,    1, 0,<br>
+		-1.0, -1.0, 1.0,    0, 0,<br>
+		-1.0, 1.0, 1.0,    0, 1,<br>
+
+		// Back
+		1.0, 1.0, -1.0,    0, 0,<br>
+		1.0, -1.0, -1.0,    0, 1,<br>
+		-1.0, -1.0, -1.0,    1, 1,<br>
+		-1.0, 1.0, -1.0,    1, 0,<br>
+
+		// Bottom<br>
+		-1.0, -1.0, -1.0,   1, 1,<br>
+		-1.0, -1.0, 1.0,    1, 0,<br>
+		1.0, -1.0, 1.0,     0, 0,<br>
+		1.0, -1.0, -1.0,    0, 1,<br>
+	];<br>
+</code></pre>
+    
+    <p>At the end of the code we need to take all the information and render the object. In the following function, the angle of rotation is being calculated as well as the canvas colour. The textures are also being bound here. Then gl.drawElements tells webGL how to render all the information it received.(Figure 6)</p>
+    
+    
+    <pre><code>*Figure 6* <br><br> var loop = function () {<br>
+        var angle = performance.now() / 1000 / 6 * 2 * Math.PI;<br>
+        
+        // parameters output, orignal matrix, angle and what axis you are rotating on<br>
+	    mat4.rotate(yRotationMatrix, identityMatrix, angle, [0, 1, 0]);<br>
+		mat4.rotate(xRotationMatrix, identityMatrix, angle / 4, [1, 0, 0]);<br>
+		mat4.mul(worldMatrix, yRotationMatrix, xRotationMatrix);<br>
+        
+		gl.uniformMatrix4fv(matWorldUniformLocation, gl.FALSE, worldMatrix);<br>
+        gl.clearColor(0.22, 0.23, 0.22, 1.0);<br>
+        gl.clear(gl.DEPTH_BUFFER_BIT | gl.COLOR_BUFFER_BIT);<br>
+        
+		gl.bindTexture(gl.TEXTURE_2D, boxTexture);<br>
+		gl.activeTexture(gl.TEXTURE0);<br>
+        
+        gl.drawElements(gl.TRIANGLES, boxIndices.length, gl.UNSIGNED_SHORT, 0<br>
+        // wont be drawing when no one is look at it<br>
+        requestAnimationFrame(loop);<br>
+    };</code></pre>
+    
+        
+    
+        <canvas  id="game-surface" width="800" height="600" style="justify-content: center">
+        </canvas>
+    <i>My WebGL Project is above this text, If you cant see it please check the console</i>
+        <br/>
+        <img src="webgl/texture/texture.png" id="texture-image" width="0" height="0">
+        <script src="webgl/gl-matrix.js"></script>
+<script src="webgl/app.js"></script>
+
+    
+    
+    <h2>Evaluation</h2> 
+    
+    <p>I couldn’t illustrate all of my code, however, if you look at the source file is commented throughout my project on what the elements do. Even so, it took me months to grasp an understanding of WebGL. The demonstrator for something simple is quite complicated under the hood. The points I have illustrated above are key when it comes to making a 3d object but there is a lot more code to it. I recommend going to developer tools and viewing the source.</p>
+
+<p>As of now, I have only been giving WebGL praise, when researching the topic, I had to explore all areas of this technology. The main drawbacks that I see from it would be when rendering something a lot more complicated than a simple object it will drastically affect your computer. Having a low spec computer would make the web pages almost unfunctionally.</p>
+
+<p>I would class this project as a success. From not knowing anything about WebGL to creating a 3D object with a texture. I couldn’t have done it without all the documentation available on the web. Being open source there are a lot of developers writing blogs and tutorials on this topic. Initial aims and objectives were met but I have only turned the first page and I do strive to learn more about WebGL.</p>
+    
+    
+
+        <h3> Word Count: 946 </h3>
+
+        <h3> Refrences: </h3>
+
+<p>Mackey, A. (2014) Why you should learn WebGL. Pluralsight.com. [Online] [Accessed on 10 March 2018] <a href="https://www.pluralsight.com/blog/software-development/webgl-basics">https://www.pluralsight.com/blog/software-development/webgl-basics</a></p>
+
+<p>Overvoorde, A. (n.d.) OpenGL - Textures. Open.gl. [Online] [Accessed on 10 March 2018] <a href="https://open.gl/textures" >https://open.gl/textures</a></p>
+
+<p>Tutorialspoint (n.d.) WebGL Quick Guide. www.tutorialspoint.com. [Online] [Accessed on 10 March 2018] <a  href="https://www.tutorialspoint.com/webgl/webgl_quick_guide.htm" >https://www.tutorialspoint.com/webgl/webgl_quick_guide.htm</a></p>
+
+</div>
+</main>
+    
+<!-- Footer -->
+<footer class="page-footer" role="contentinfo">
+    <ul class="bottom-nav">
+        <li><a href="index.html" title="Landing page for my portfolio.">Home</a></li>
+        <li><a href="portfolio.html" title="Collection of my work. Including my Curriculum vitae.">Portfolio</a></li>
+        <li><a href="blog.html" title="How i created and developed this website.">Blog</a></li>
+        <li><a href="about.html" title="My career aspirations and experiences.">About</a></li>
+    </ul>
+
+    <div class="disclaimer">
+        <p>&copy; <a href="http://www.mmu.ac.uk/" title="MMU homepage">MMU 2017</a> | THIS IS STUDENT COURSEWORK | TUTOR <a href="mailto:r.eskins@mmu.ac.uk">Richard Eskins</a> | <a href="http://validator.w3.org/check?uri=referer" title="W3C HTML Validation Service">Valid HTML</a> </p>
+    </div>
+</footer>
+    
+</body>
+</html>

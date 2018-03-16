@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+
+<head>
+    <meta charset="utf-8">
+    <title>Blog | BEM </title>
+    <meta name="description" content="This is a collection of my blogs. You will find me thoughts and opinions on different topics also a blog on how i made this website also, what i did to optimize it. ">
+    <meta name="keywords" content="portfolio, web, developer, student, graduate, blog, technology, SEO">
+    <meta name="author" content="Abu-Hurairah Chohan">
+    <meta name="geo.placename" content="Manchester, UK" />
+    <meta name="geo.position" content="53.4807590;-2.2426310" />
+    <meta name="geo.region" content="GB-England" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="icon" type="image/icon" href="images/favIcons/favicon.ico" />
+    <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+</head>
+
+<body>
+    
+<!-- Skiplinks -->
+<p class="skiplinks"> <a href="#content">Skip to content</a> <a href="#navigation">Skip to navigation</a> </p>
+
+
+    <!-- Navagation -->
+<nav role="navigation" id="navigation">
+        <div class="navigation">
+        <div class="navigation-logo"><a href="index.html"><img src="images/logo/logo-black.png" width="60" height="60" alt="My personal logo"></a></div>
+            <div class="navigation-items">
+        <div><a href="index.html" title="Landing page for my portfolio.">Home</a></div>
+        <div><a href="portfolio.html" title="Collection of my work. Including my Curriculum vitae.">Portfolio</a></div>
+        <div><a href="blog.html" title="How i created and developed this website.">Blog</a></div>
+        <div><a href="about.html" title="My career aspirations and experiences.">About</a></div>
+            </div>
+        </div>
+</nav>
+    
+<!-- Body Content -->
+<main class="page-content" id="content" role="main">
+
+<h1> BEM </h1>
+<div class="blog">
+
+    <h2>The aim of this project</h2>
+    <p>To show the benefits of using BEM targeting methodology.</p>
+    <h2>Objectives</h2>
+
+    <p>To Create a card element with child inside.</p>
+    <p>To Use a modifier to edit one child element.</p>
+    <p>To nest a child element within another child element to demonstrate good name practice.</p>
+    <a href="#bemProject">Go to the finished project here.</a>
+    
+    <br>
+    <br>
+    <h2>Definition</h2>
+    <p>BEM is a “highly useful, powerful, and simple naming convention that makes your front-end code easier to read and understand, easier to work with, easier to scale, more robust and explicit, and a lot more strict.” (getBem, 2018) this was developed by a company called <a href="https://www.yandex.com/">Yandex.</a> They created this method as a way for a team to work more efficiently together. It’s gone through many iterations since 2005 when it was first developed. And it’s been developed what we know today as simply… (Figure 1)</p>
+    
+    
+    <pre>
+    <code> *Figure 1* <br><br>.block {...} <br> .block__element {...} <br> .block__element--modifier {...}</code>
+    </pre>
+
+<h2>Context</h2>
+    
+    <p>Yandex decided on making independent modules based on various parts of their websites including scripts, styles and templates. They named these “blocks”. To simplify you make each element of a website with unique class names and structured like what code is shown above. This way the only thing being targeted in the stylesheet is this element. Various companies have adopted this method such as Google, BBC and BuzzFeed. And it’s only growing, this gives a lot of reason to learn it now.</p>
+    
+    <h2>My starting point </h2>
+    
+    <p>When starting this project, I had a rough idea to use BEM. However, I haven’t used it in a practical example. I've always had a problem naming my elements on a page I wanted to learn this methodology as previous websites I have coded is not named well and are confusing to edit. I was ready to make web elements using this method. Starting this project, I had a profound understanding of CSS3 and HTML5 so I wanted to see how easier It made styling a website. BEM also ties in with atomic design</p>
+    
+    <h2>The set up</h2>
+    
+    <p>Setting up to use BEM isn’t any different to making a webpage. In this instance, my personal choice of software was using code pen, CSS3 and HTML5. There weren’t any libraries to download as it’s a methodology. So, you are good to go right from your text editor!</p>
+    
+    <img src="images/blog-images/tools-used-BEM.png" width="1366" height="520" alt="collection of logos that includes codepen, html and css">
+
+    <h2>How did i make it?</h2>
+
+<p>To start this project off I needed to write HTML5. I planned out beforehand what I wanted to make so this made it easier when it came to picking class names. I wrote the mark up below and gave the respective elements their tags.(Figure 2)</p>
+    
+    <pre>
+    <code>*Figure 2*<br><br>&lt;div class="flower-card"&gt;<br><br>
+&lt;h1 class="flower-card__heading"&gt;&lt;/h1&gt;<br><br>
+&lt;img class="flower-card__image" src="#"&gt;<br><br>
+  &lt;div class="flower-card__content"&gt;<br><br>
+  &lt;p class="flower-card__description"&gt;&lt;/p&gt;<br><br>
+&lt;div class="flower-card__btn-parent"&gt;<br><br>
+&lt;button class="flower-card__btn"&gt;&lt;/button&gt;<br><br>
+&lt;button class="flower-card__btn flower-card__btn--speical"&gt;&lt;/button&gt;<br><br>
+  &lt;/div&gt;</code>
+    </pre>
+    
+    <p>As using BEM allows me to make this in a modular way I’ve broken it down into sections. I’ve included a div as a filler within this to act as some content otherwise it would just be empty. I’ve also added some resets and imported a font at the bottom of the stylesheet.</p>
+
+        <p data-height="578" data-theme-id="dark" data-slug-hash="bvNjXV" data-default-tab="result,css" data-user="abuchohan" data-embed-version="2" data-pen-title="BEM Project Demonstrator 1" class="codepen">See the Pen <a href="https://codepen.io/abuchohan/pen/bvNjXV/">BEM Project Demonstrator 1</a> by Abu Chohan (<a href="https://codepen.io/abuchohan">@abuchohan</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+    <br><br>
+    <p>
+Adding on to this I have given the block an element of heading. Because of BEM, I can target this heading specifically and not worry about other H1’s on the page being affected.
+</p>
+
+
+        <p data-height="250" data-theme-id="dark" data-slug-hash="xWbJvz" data-default-tab="result,css" data-user="abuchohan" data-embed-version="2" data-pen-title="BEM Project Demonstrator 2" class="codepen">See the Pen <a href="https://codepen.io/abuchohan/pen/bvNjXV/">BEM Project Demonstrator 2</a> by Abu Chohan (<a href="https://codepen.io/abuchohan">@abuchohan</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+        <br><br>
+    <p>Adding another element from the code above, it’s all being targeted within this block and will not affect anything else on this page.</p>
+    
+        <p data-height="450" data-theme-id="dark" data-slug-hash="bvNxrB" data-default-tab="result,css" data-user="abuchohan" data-embed-version="2" data-pen-title="BEM Project Demonstrator 3" class="codepen">See the Pen <a href="https://codepen.io/abuchohan/pen/bvNjXV/">BEM Project Demonstrator 3</a> by Abu Chohan (<a href="https://codepen.io/abuchohan">@abuchohan</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+        <br><br>
+    <p>Now you are probably wondering why I have got another child within a child element of the block. This would be considered two levels deep. So how would I name it? At the start of this project, I had named this…</p>
+    
+    <pre><code>.flower-card__content <br> .flower-card__content__description</code></pre>
+<p>However, after reading an article about <a href="https://zellwk.com/blog/css-architecture-1/">CSS architecture</a> there is no need for these lengthy class names as it would already be specific to the block and it's messy. I altered the code so it looks simpler. This way it could be understood better.</p>
+        <pre><code>.flower-card__content <br> .flower-card__description</code></pre>
+    
+
+        <p data-height="550" data-theme-id="dark" data-slug-hash="VXYGzo" data-default-tab="result,css" data-user="abuchohan" data-embed-version="2" data-pen-title="BEM Project Demonstrator 4" class="codepen">See the Pen <a href="https://codepen.io/abuchohan/pen/bvNjXV/">BEM Project Demonstrator 4</a> by Abu Chohan (<a href="https://codepen.io/abuchohan">@abuchohan</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+    
+    <br><br>
+        <p>Lastly, I have added two buttons to the block. Again, I have added a parent to these buttons so I could control the padding around it. I have styled the button with a base class this gives it all the padding and colours etc. But on the orange button, I have used a modifier. To use one of these and give it the style from the other button I give this one two classes...(Figure 3) </p>
+    
+    <pre><code>*Figure 3*<br><br>.flower-card__btn <br> .flower-card__btn--special </code></pre>
+
+<p>This way with the modifier element I can just change what I want to on this button. In this case, it’s just the colour. This could have practical uses such as sale items in an e-commerce website. Instead of making a new class you can just add a modifier to the existing one.</p>
+    
+        <div id="bemProject"></div>
+        <p  data-height="645 " data-theme-id="dark" data-slug-hash="KQjLEW" data-default-tab="result,css" data-user="abuchohan" data-embed-version="2" data-pen-title="BEM Project Demonstrator 5" class="codepen">See the Pen <a href="https://codepen.io/abuchohan/pen/bvNjXV/">BEM Project Demonstrator 5</a> by Abu Chohan (<a href="https://codepen.io/abuchohan">@abuchohan</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+    <br><br>
+
+
+    <h2>Evaluation</h2>
+
+    <p>The demonstrator uses all the different parts of BEM that I would of like to touch on. It also successfully achieves the aims and objectives I set out to do. In terms of what I made it was just a demonstration piece that didn’t need to be overly complex. The best part about BEM is it doesn’t constrain you to certain class names it just gives you the means of a laying them out in a universal method. I personally believe that this method will be the standard in the near future.</p>
+
+    <p>Before using BEM, I was using SCSS to achieve an atomic design. However, nesting multiple elements within each other can get really complicated to read. Furthermore, BEM also helps the page load faster. This happens because whenever a browser renders an HTML page, it loads the styles found in CSS into a tree of selectors.</p>
+
+    <p>In summary, I think this project was a huge success. In terms of learning how to effectively use this method. An invaluable tool would be the countless blogs developers have written on this topic, this helped me grasp how to use it. Everything I look at on the web I critically think of what the logical class name would be and how BEM has helped me do that. I strongly favour this method and will continue to use it in all my future projects.</p>
+
+
+        <h3> Word Count: 937 </h3>
+
+        <h3> Refrences: </h3>
+
+
+<p>Erd, J. (2017) 5 Reasons To Use BEM (a.k.a. why is BEM G.R.E.A.T.). EL Passion Blog. [Online] [Accessed on 10 March 2018] <a href="https://blog.elpassion.com/reasons-to-use-bem-a88738317753">https://blog.elpassion.com/reasons-to-use-bem-a88738317753</a></p>
+
+<p>Kuznetsov, V., Bezuglaya, V. and Abramov, A. (2016) Best practices: Achieving modular design with BEM. Graph. [Online] [Accessed on 10 March 2018] <a href="https://www.graph.uk/enhancing-modular-design-with-bem">https://www.graph.uk/enhancing-modular-design-with-bem</a></p>
+
+<p>Writing modular CSS (Part 1) — BEM | Zell Liew. (2017) Zell Liew. [Online] [Accessed on 10 March 2018] <a href="https://zellwk.com/blog/css-architecture-1">https://zellwk.com/blog/css-architecture-1/</a></p>
+
+</div>
+</main>
+    
+<!-- Footer -->
+<footer class="page-footer" role="contentinfo">
+    <ul class="bottom-nav">
+        <li><a href="index.html" title="Landing page for my portfolio.">Home</a></li>
+        <li><a href="portfolio.html" title="Collection of my work. Including my Curriculum vitae.">Portfolio</a></li>
+        <li><a href="blog.html" title="How i created and developed this website.">Blog</a></li>
+        <li><a href="about.html" title="My career aspirations and experiences.">About</a></li>
+    </ul>
+
+    <div class="disclaimer">
+        <p>&copy; <a href="http://www.mmu.ac.uk/" title="MMU homepage">MMU 2017</a> | THIS IS STUDENT COURSEWORK | TUTOR <a href="mailto:r.eskins@mmu.ac.uk">Richard Eskins</a> | <a href="http://validator.w3.org/check?uri=referer" title="W3C HTML Validation Service">Valid HTML</a> </p>
+    </div>
+</footer>
+    
+</body>
+</html>

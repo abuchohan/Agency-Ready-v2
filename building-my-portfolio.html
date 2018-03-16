@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+
+<head>
+    <meta charset="utf-8">
+    <title>Blog | Building my Portfolio </title>
+    <meta name="description" content="This is a collection of my blogs. You will find me thoughts and opinions on different topics also a blog on how i made this website also, what i did to optimize it. ">
+    <meta name="keywords" content="portfolio, web, developer, student, graduate, blog, technology, SEO">
+    <meta name="author" content="Abu-Hurairah Chohan">
+    <meta name="geo.placename" content="Manchester, UK" />
+    <meta name="geo.position" content="53.4807590;-2.2426310" />
+    <meta name="geo.region" content="GB-England" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="icon" type="image/icon" href="images/favIcons/favicon.ico" />
+</head>
+
+<body>
+    
+<!-- Skiplinks -->
+<p class="skiplinks"> <a href="#content">Skip to content</a> <a href="#navigation">Skip to navigation</a> </p>
+
+
+<!-- Navagation -->
+<nav role="navigation" id="navigation">
+        <div class="navigation">
+        <div class="navigation-logo"><a href="index.html"><img src="images/logo/logo-black.png" width="60" height="60" alt="My personal logo"></a></div>
+            <div class="navigation-items">
+        <div><a href="index.html" title="Landing page for my portfolio.">Home</a></div>
+        <div><a href="portfolio.html" title="Collection of my work. Including my Curriculum vitae.">Portfolio</a></div>
+        <div><a href="blog.html" title="How i created and developed this website.">Blog</a></div>
+        <div><a href="about.html" title="My career aspirations and experiences.">About</a></div>
+            </div>
+        </div>
+</nav>
+
+
+<!-- Body Content -->
+<main class="page-content" id="content" role="main">
+
+    <h1> Building my Portfolio</h1>
+    <div class="blog">
+
+        <h2>The Process</h2>
+        <p>If you are here you have most likely had a wander around my website. Hopefully, you like it. I’ll give you some insights on the tools and processes I used to help me build this site from the ground up. </p>
+
+        <h2>Research</h2>
+
+        <p>I believe research is the backbone of everything you do. When it came to this I wanted to know how I could best display all the information I needed to in a responsive way. I looked at websites such as <a href="http://www.emilyridge.ie/">Emily Ridge</a> and <a href="https://stevenmengin.com/"> Steven Mengin</a> to gain an understanding of portfolio layouts. These sites are unique in the sense they are achieving the same goal just in a different way. Emily’s website has a lot of information displayed in a clear grid fashion whereas, Steven’s has WebGL navigation which makes a pleasant browsing experience. I strive to achieve this level of portfolios soon. </p>
+
+        <h2>Design</h2>
+
+        <p>Coming from a graphic design background I believe I have a good understanding of the process to design. But when designing for the web I had to think about how I would put it together and what technology would go into certain parts of the design. Initially, I just came up with some sketches from the website as I was doing the research. As time went on I developed these further and they turned into wireframes. </p>
+
+        <p>Typography is the biggest design aspect of a website. Coming from my design background I knew a little about it on logos and magazines but I wasn't so sure about how to display it on the web. I read an article about <a href="https://www.smashingmagazine.com/2016/05/fluid-typography/">fluid typographic</a> from <a href="https://www.smashingmagazine.com/">smashing magazine</a> it explained what margins I should have on my body text to make it easier for the user to read. Using that information on this website so hopefully, this is easy for you to read. My main design decision for the type of this website was readability. I chose to go with <a href="">Roboto</a>. </p>
+
+        <h2>Let's get coding? No, Style Guide, Site Mapping and Wireframes</h2>
+
+        <h3>Style guide</h3>
+        <p>Initially, my colour scheme wasn't great. According to the <a href="https://developer.paciellogroup.com/resources/contrastanalyser/">Colour Contrast Analyser</a>, the readability was not great. An old tutor of mine once said “less is more” so I decided on a three tone. I used web app called <a href="https://frontify.com/">frontify</a> to create my style guide as it compiles it into an easy to read document. The design I was going for was a flat design that's highly accessible. </p>
+
+        <img src="images/blog-images/style-guide.jpg" width="1311" height="1272" alt="image of a visual representation of my style guide">
+
+        <p>Having gone through multiple iterations of a colour scheme I also went through different colours of my logo and how that would affect my visual hierarchy and I didn't want it to get in the way of the content. I didn't make it my accent colour because of the content, in my opinion, is more of the focus. </p>
+
+        <img src="images/blog-images/logo.jpg" width="1602" height="1272" alt="a collection of my logo in 3 different colours">
+
+        <h3>Site Mapping </h3>
+
+        <p>With the process of designing a website file structure is key. Without it, you can get lost where things are and what goes where. I drafted up what pages I would have on my site. I used it to know what subfolders I would need. It turned out to be an invaluable tool. </p>
+
+        <img src="images/blog-images/website-map.jpg" width="630" height="588" alt="a drawing of a visual representation of my website map">
+
+        <h3>Wire Frames</h3>
+
+        <p>The bread and butter of designing a webpage. Collating all my other information this step gave me an insight on what I was going to make without a single line of code. It’s used widely in companies today because it’s the most efficient way to change things if you don’t like it. </p>
+
+        <img src="images/blog-images/wire-frames.jpg" width="621" height="944" alt="sketches of my website before i coded them">
+
+        <h2>The real problem, Responsive Navigation</h2>
+
+        <p>A big problem in my eyes is the hamburger menu. I read a <a href="https://lmjabreu.com/post/why-and-how-to-avoid-hamburger-menus/">interesting article</a> that gives a solution to this problem. He starts the article out with a quote “out of sight out of mind”. To a user, a hamburger menu would be out of site and require more action for them to go navigate through a site. The solution was simple and it is being used today in many apps like Twitter/Reddit, it’s a bottom navigation bar. </p>
+
+        <h2>To coding, SCSS and Flexbox</h2>
+
+        <p>These are two main technologies I used. SCSS is a great CSS pre-processer to keep your CSS clean and making it manageable with it being 1000+ lines. Flexbox is a life saver. Introduced in 2014 and been adopted by many companies it lays a great foundation for responsive web design with only a few lines of code. With these, I could make my website conform to any viewport and not hinder the design. </p>
+
+        <p>Creating my portfolio was a difficult task. I had to adopt all the knowledge I knew and even learn some more to make an accessible and functional portfolio. I believe it’s given me the knowledge to move on to bigger projects in the future. </p>
+
+        <a href="https://github.com/abuchohan"><img src="images/icons/github.png" width="64" height="64" alt="github logo"></a>
+
+        <h3> Word Count: 773 </h3>
+
+        <h3> Refrences: </h3>
+
+        <p>Lmjabreu.com. (2017). Why and How to Avoid Hamburger Menus - Louie A. - Mobile UX Design. [online] Available at: <a href="https://lmjabreu.com/post/why-and-how-to-avoid-hamburger-menus">https://lmjabreu.com/post/why-and-how-to-avoid-hamburger-menus/</a> [Accessed 30 Oct. 2017].</p>
+
+        <p>Riethmuller, M. (2017). Responsive Font Size And Fluid Typography – Smashing Magazine. [online] Smashingmagazine.com. Available at: <a href="https://www.smashingmagazine.com/2016/05/fluid-typography">https://www.smashingmagazine.com/2016/05/fluid-typography/</a> [Accessed 30 Oct. 2017].</p>
+
+    </div>
+    
+</main>
+    
+<!-- Footer -->
+<footer class="page-footer" role="contentinfo">
+    <ul class="bottom-nav">
+        <li><a href="index.html" title="Landing page for my portfolio.">Home</a></li>
+        <li><a href="portfolio.html" title="Collection of my work. Including my Curriculum vitae.">Portfolio</a></li>
+        <li><a href="blog.html" title="How i created and developed this website.">Blog</a></li>
+        <li><a href="about.html" title="My career aspirations and experiences.">About</a></li>
+    </ul>
+
+    <div class="disclaimer">
+        <p>&copy; <a href="http://www.mmu.ac.uk/" title="MMU homepage">MMU 2017</a> | THIS IS STUDENT COURSEWORK | TUTOR <a href="mailto:r.eskins@mmu.ac.uk">Richard Eskins</a> | <a href="http://validator.w3.org/check?uri=referer" title="W3C HTML Validation Service">Valid HTML</a> </p>
+    </div>
+</footer>
+    
+</body>
+</html>
