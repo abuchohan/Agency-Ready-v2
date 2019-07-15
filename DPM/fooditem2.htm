@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+
+<head>
+    <meta charset="utf-8">
+    <title>Home Sweet Home - Student Search </title>
+    <meta name="description" content="#">
+    <meta keywords="Manchester, students,Northern Quarter, *ADD MORE*">
+    <meta name="geo.position" content="53.4825;2.2345">
+    <meta name="geo.placename" content="Manchester Northern Quarter">
+<!--DOUBLE CHECK THIS TAG -->
+    <meta name="geo.region" content="ISO 3166-2:GB">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="CSS/stylesheet.css" type="text/css" media="all">
+</head>
+<body>
+<!-- Skiplinks --> 
+<a class="skip-link screen-reader-text" href="#content">Skip to content</a>
+<a class="skip-link screen-reader-text" href="#navigation">Skip to navigation</a>
+<!-- Navagation -->
+   <nav class="page-nav" id="navigation" role="navigation">
+        <ul class="topnav" id="myTopnav">
+            <li class="studentsearch"><a href="index.htm" title="#">Student Search</a></li>
+			<div class="floatright">
+            <li class="bars"><a href="bars.htm" title="#">Bars</a></li>
+            <li class="food"><a href="food.htm" title="#">Food</a></li>
+            <li class="music"><a href="music.htm" title="#">Music</a></li>
+            <li class="clubs"><a href="clubs.htm" title="#">Clubs</a></li>
+            <li class="shops"><a href="shops.htm" title="#">Shops</a></li>
+            <li class="aboutus"><a href="aboutus.htm" title="#">About us</a></li>
+			</div>
+            <li class="icon">
+    <a href="javascript:void(0);" onclick="myFunction()">
+    <div class="hamburger hamburger--spring">
+    <div class="hamburger-box">
+    <div class="hamburger-inner">
+    </div>
+    </div>
+  </div></a>
+  </li>
+        </ul>
+    </nav>
+    <script>
+  
+    var forEach=function(t,o,r){if("[object Object]"===Object.prototype.toString.call(t))for(var c in t)Object.prototype.hasOwnProperty.call(t,c)&&o.call(r,t[c],c,t);else for(var e=0,l=t.length;l>e;e++)o.call(r,t[e],e,t)};
+
+    var hamburgers = document.querySelectorAll(".hamburger");
+    if (hamburgers.length > 0) {
+      forEach(hamburgers, function(hamburger) {
+        hamburger.addEventListener("click", function() {
+          this.classList.toggle("is-active");
+        var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
+        }, false);
+      });
+    }
+  </script>
+<!-- Body Content -->
+    <main class="main-content" id="content" role="main">
+   <div class="hero-container">
+    <div class="hero" style="background-image:url(images/heroimages/food/fooditem2.jpg);">
+        <div class="dummy"><p>Home Sweet Home</p></div>
+    </div>
+</div>
+        <div class="aboutcontent">
+        <p>The land of amazing cakes and shakes. Also the land of amazing breakfast food, salads, burgers and a whole host of other American inspired cuisine. A fun and aesthetically pleasing place to eat with amazing food and cake to die for (we recommend the carrot cake) Home Sweet Home offers a lovely atmosphere in two great locations in the city. After all, with totally Instagramable food and totally over the top cakes, what’s not to love?</p> 
+<p>For more info (and most importantly, a menu) browse  <a href="http://homesweethomenq.com/ ">their website</a>  </p>
+            
+
+            </div>
+        <div class="reviewparent">
+        <h2>Reviews</h2>
+            <hr>
+            <div class="review-content">
+            <div class="review">
+           <img src="images/reviews/Court.png" alt="close up image of Jonathan Dickins" class="review-image">
+           <div class= review-text>
+            <h3>Court</h3>
+            <p>First time I visited here I just had a shake (which was incredible) but the second time me and a few friends on my course at uni went for lunch to talk over some project work and it was amazing! The American style food is amazing and the cakes – I can’t even describe the cakes it is just something you have to try. I ended up having the chicken and waffles, it was unreal so tasty and not as expensive as I expected it to be. I expected it to be really expensive like a high end café because of the look and feel of the place but it was great. Safe to say I had a couple of pictures of the food up on my Instagram by the time we’d finished.</p>
+                </div>
+                </div>
+            </div>
+        </div>
+        
+    </main>
+<!-- Footer -->
+    <footer class="page-footer" role="contentinfo"> 
+        <p>&copy; <a href="http://www.mmu.ac.uk/" title="MMU homepage">MMU 2017</a> | THIS IS STUDENT COURSEWORK | TUTOR <a href="mailto:r.eskins@mmu.ac.uk">Richard Eskins</a> | <a href="http://validator.w3.org/check?uri=referer" title="W3C HTML Validation Service">Valid HTML</a> </p>
+    </footer>
+</body>
+</html>
+
+
+
+
+
+
+
+

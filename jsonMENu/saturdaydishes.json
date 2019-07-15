@@ -1,0 +1,27 @@
+{
+  "Chicken Fillet Enchilada" : 
+  {
+    "Description":"Chilli butter-basted chicken – dirty rice – avocado salsa – baked in a herb rubbed tortilla & liquid cheese – sweet potato fries – gravy.",
+    "Price":"14.95"
+  },
+  "Flattened Rump 12oz" : 
+  {
+    "Description":"Roasted garlic butter.",
+    "Price":"17.95"
+  },
+  "The TOP TOSH Burger" : 
+  {
+    "Description":"Our house made burger – stripped down, bourbon rubbed, BBQ beef – Cheshire cheese – onion rings – stock pot gravy – real chips – herb brioche bun – ‘Howling at the Moon’ sauce.",
+    "Price":"15.95"
+  },
+  "House Burger" : 
+  {
+    "Description":"Mature beef, herbs & spices from us & that’s it! – caramelised onion brioche bun – gherkin – real chips – tomato & roast garlic relish.",
+    "Price":"11.95"
+  },
+  "The Rushton Grill" : 
+  {
+    "Description":"The biggest & best mixed grill sharer – veal cutlets, tomahawk steak, 2 chicken breasts, 4 Cumberland sausages, 2 10oz gammon steaks – hand cut chips, onion rings, roasted tomatoes, honey roasted carrots – béarnaise & pepper sauces – house gravy.",
+    "Price":"120.00"
+  } 
+}

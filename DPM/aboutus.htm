@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+
+<head>
+    <meta charset="utf-8">
+    <title>Team Enigma</title>
+    <meta name="description" content="#">
+    <meta keywords="Manchester, students,Northern Quarter, *ADD MORE*">
+    <meta name="geo.position" content="53.4825;2.2345">
+    <meta name="geo.placename" content="Manchester Northern Quarter">
+<!--DOUBLE CHECK THIS TAG -->
+    <meta name="geo.region" content="ISO 3166-2:GB">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="CSS/stylesheet.css" type="text/css" media="all">
+</head>
+<body>
+<!-- Skiplinks --> 
+<a class="skip-link screen-reader-text" href="#content">Skip to content</a>
+<a class="skip-link screen-reader-text" href="#navigation">Skip to navigation</a>
+<!-- Navagation -->
+   <nav class="page-nav" id="navigation" role="navigation">
+        <ul class="topnav" id="myTopnav">
+            <li class="studentsearch"><a href="index.htm" title="#">Student Search</a></li>
+			<div class="floatright">
+            <li class="bars"><a href="bars.htm" title="#">Bars</a></li>
+            <li class="food"><a href="food.htm" title="#">Food</a></li>
+            <li class="music"><a href="music.htm" title="#">Music</a></li>
+            <li class="clubs"><a href="clubs.htm" title="#">Clubs</a></li>
+            <li class="shops"><a href="shops.htm" title="#">Shops</a></li>
+            <li class="aboutus"><a href="aboutus.htm" title="#">About us</a></li>
+			</div>
+            <li class="icon">
+    <a href="javascript:void(0);" onclick="myFunction()">
+    <div class="hamburger hamburger--spring">
+    <div class="hamburger-box">
+    <div class="hamburger-inner">
+    </div>
+    </div>
+  </div></a>
+  </li>
+        </ul>
+    </nav>
+    <script>
+    var forEach=function(t,o,r){if("[object Object]"===Object.prototype.toString.call(t))for(var c in t)Object.prototype.hasOwnProperty.call(t,c)&&o.call(r,t[c],c,t);else for(var e=0,l=t.length;l>e;e++)o.call(r,t[e],e,t)};
+
+    var hamburgers = document.querySelectorAll(".hamburger");
+    if (hamburgers.length > 0) {
+      forEach(hamburgers, function(hamburger) {
+        hamburger.addEventListener("click", function() {
+          this.classList.toggle("is-active");
+        var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
+        }, false);
+      });
+    }
+  </script>
+<!-- Body Content -->
+    <main class="main-content" id="content" role="main">
+</div>
+       <header class="header">
+        <h1>Team Enigma</h1>
+           </header>
+           
+            <div class="members">
+           <div class="member"><img src="images/aboutuspics/abu%20%20pic.png" alt="close up image of Abu Chochan" class="review-image">
+            <h3>Abu Chohan</h3>
+               <p><i>Senior Project Manager</i></p>
+                </div>
+                <div class="member"><img src="images/aboutuspics/beth%20pic.png" alt="close up image of Beth Halliwell" class="review-image">
+            <h3>Beth Halliwell</h3>
+               <p><i>Secondary Project Manager</i></p>
+                </div>
+                <div class="member"><img src="images/aboutuspics/ivo%20pic.png" alt="close up image of Ivailo Stoyanov" class="review-image">
+            <h3>Ivailo Stoyanov</h3>
+               <p><i>Web Developer</i></p>
+                </div>
+                <div class="member"><img src="images/aboutuspics/ryan.png" alt="close up image of Ryan Barker" class="review-image">
+            <h3>Ryan Barker</h3>
+               <p><i>Content Creator</i></p>
+                </div>
+                <div class="member"><img src="images/aboutuspics/pp.png" alt="close up image of Basit Khan" class="review-image">
+            <h3>Basit Khan</h3>
+                    <p><i>Researcher</i></p>
+                </div>
+            </div>
+        
+    </main>
+<!-- Footer -->
+    <footer class="page-footer" role="contentinfo"> 
+        <p>&copy; <a href="http://www.mmu.ac.uk/" title="MMU homepage">MMU 2017</a> | THIS IS STUDENT COURSEWORK | TUTOR <a href="mailto:r.eskins@mmu.ac.uk">Richard Eskins</a> | <a href="http://validator.w3.org/check?uri=referer" title="W3C HTML Validation Service">Valid HTML</a> </p>
+    </footer>
+</body>
+</html>
+
+
+
+
+
+
+
+

@@ -1,0 +1,27 @@
+{
+  "Daily Soup (House Dish)" : 
+  {
+    "Description":"House made – served with artisan bread & farm butter – mostly (V) please ask.",
+    "Price":"5.95"
+  },
+  "Pie Of The Day" : 
+  {
+    "Description":"Served with proper mash & mushy peas",
+    "Price":"12.95"
+  },
+  "Curry (House Dish)" : 
+  {
+    "Description":"Seasonal vegetables simmered in our 14 spice curry sauce – flatbread & real pilau rice.(add chicken – +£3)(V)",
+    "Price":"12.95"
+  },
+  "Fish and Chips" : 
+  {
+    "Description":"Fresh beer battered fish – real chips – mushy peas & thick buttered white bread.",
+    "Price":"9.95"
+  },
+  "Cumberland Sausage and Mash" : 
+  {
+    "Description":"Our own handmade sausages – mash potato & onion gravy.",
+    "Price":"11.95"
+  } 
+}

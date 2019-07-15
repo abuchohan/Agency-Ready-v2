@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+
+<head>
+    <meta charset="utf-8">
+    <title> Bars - Student Search</title>
+    <meta name="description" content="#">
+    <meta keywords="Manchester, students,Northern Quarter, *ADD MORE*">
+    <meta name="geo.position" content="53.4825;2.2345">
+    <meta name="geo.placename" content="Manchester Northern Quarter">
+<!--DOUBLE CHECK THIS TAG -->
+    <meta name="geo.region" content="ISO 3166-2:GB">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="CSS/stylesheet.css" type="text/css" media="all">
+</head>
+<body>
+<!-- Skiplinks --> 
+<a class="skip-link screen-reader-text" href="#content">Skip to content</a>
+<a class="skip-link screen-reader-text" href="#navigation">Skip to navigation</a>
+<!-- Navagation -->
+   <nav class="page-nav" id="navigation" role="navigation">
+        <ul class="topnav" id="myTopnav">
+            <li class="studentsearch"><a href="index.htm" title="#">Student Search</a></li>
+			<div class="floatright">
+            <li class="bars"><a href="bars.htm" title="#">Bars</a></li>
+            <li class="food"><a href="food.htm" title="#">Food</a></li>
+            <li class="music"><a href="music.htm" title="#">Music</a></li>
+            <li class="clubs"><a href="clubs.htm" title="#">Clubs</a></li>
+            <li class="shops"><a href="shops.htm" title="#">Shops</a></li>
+            <li class="aboutus"><a href="aboutus.htm" title="#">About us</a></li>
+			</div>
+            <li class="icon">
+    <a href="javascript:void(0);" onclick="myFunction()">
+    <div class="hamburger hamburger--spring">
+    <div class="hamburger-box">
+    <div class="hamburger-inner">
+    </div>
+    </div>
+  </div></a>
+  </li>
+        </ul>
+    </nav>
+    <script>
+  
+    var forEach=function(t,o,r){if("[object Object]"===Object.prototype.toString.call(t))for(var c in t)Object.prototype.hasOwnProperty.call(t,c)&&o.call(r,t[c],c,t);else for(var e=0,l=t.length;l>e;e++)o.call(r,t[e],e,t)};
+
+    var hamburgers = document.querySelectorAll(".hamburger");
+    if (hamburgers.length > 0) {
+      forEach(hamburgers, function(hamburger) {
+        hamburger.addEventListener("click", function() {
+          this.classList.toggle("is-active");
+        var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
+        }, false);
+      });
+    }
+  </script>
+<!-- Body Content -->
+    <main class="main-content" id="content" role="main">
+   <div class="hero-container">
+    <div class="hero" style="background-image:url(images/bananas_2-wallpaper-2560x1080.jpg);">
+        <div class="dummy"><p>BAR NAME</p></div>
+    </div>
+</div>
+        <div class="aboutcontent">
+        <p>
+        This banana looks a lot like a bird, doesn't it? When originally posted there was some debate whether it was a hummingbird, a seagull, or a crow. I stand by my earlier statement that it is a banana. This banana looks a lot like a bird, doesn't it? When originally posted there was some debate whether it was a hummingbird, a seagull, or a crow. I stand by my earlier statement that it is a banana. This banana looks a lot like a bird, doesn't it? When originally posted there was some debate whether it was a hummingbird, a seagull, or a crow. I stand by my earlier statement that it is a banana. This banana looks a lot like a bird, doesn't it? When originally posted there was some debate whether it was a hummingbird, a seagull, or a crow. I stand by my earlier statement that it is a banana. This banana looks a lot like a bird, doesn't it? When originally posted there was some debate whether it was a hummingbird, a seagull, or a crow. I stand by my earlier statement that it is a banana. This banana looks a lot like a bird, doesn't it? When originally posted there was some debate whether it was a hummingbird, a seagull, or a crow. I stand by my earlier statement that it is a banana. This banana looks a lot like a bird, doesn't it? When originally posted there was some debate whether it was a hummingbird, a seagull, or a crow. I stand by my earlier statement that it is a banana. This banana looks a lot like a bird, doesn't it? When originally posted there was some debate whether it was a hummingbird, a seagull, or a crow. I stand by my earlier statement that it is a banana. This banana looks a lot like a bird, doesn't it? When originally posted there was some debate whether it was a hummingbird, a seagull, or a crow. I stand by my earlier statement that it is a banana. </p>
+            </div>
+        <div class="reviewparent">
+        <div class="review">
+        <h2>Reviews</h2>
+            <p>Lorem ipsum dolor sit amet, aliquam justo sodales fermentum lacinia tincidunt vehicula, tortor minima at nibh condimentum. Tristique at malesuada ullamcorper lacus pharetra justo, eget massa risus volutpat elit mauris consequat, fermentum volutpat proin volutpat, suscipit malesuada at eu. Varius interdum nulla ac metus vivamus, sit nullam vestibulum id. Elit neque congue faucibus morbi mi, sit gravida vitae leo non sit ut. Tellus porttitor integer, suspendisse vivamus, ut leo ut volutpat eu elit, elit quisque. Sociosqu tortor cursus nulla praesent, nulla velit accumsan etiam velit. Odio magnis metus non, sed libero curae diam ut ullamcorper tortor, consequat vivamus accumsan sit mattis pellentesque, urna nunc aenean arcu elit est, etiam rhoncus etiam velit consequat.</p>
+        </div>
+            </div>
+        </br>
+    </main>
+<!-- Footer -->
+    <footer class="page-footer" role="contentinfo"> 
+        <p>&copy; <a href="http://www.mmu.ac.uk/" title="MMU homepage">MMU 2017</a> | THIS IS STUDENT COURSEWORK | TUTOR <a href="mailto:r.eskins@mmu.ac.uk">Richard Eskins</a> | <a href="http://validator.w3.org/check?uri=referer" title="W3C HTML Validation Service">Valid HTML</a> </p>
+    </footer>
+</body>
+</html>
+

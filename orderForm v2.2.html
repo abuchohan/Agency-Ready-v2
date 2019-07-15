@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+<title>The Shirt Company</title>
+<link href="http://55060509.webdevmmu.uk/style-guide/global.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div class="container">
+<h1>Welcome to The Shirt Company (Est 2016)</h1>
+    </br>
+    <h2>Please enter your name and place your order:</h2>
+<form id="orderForm">
+
+<!-- Input Fields -->
+First name: <input type="text" name="firstName" id="fName" placeholder="First Name" ></br>
+Last Name: <input type="text" name="lastName" id="lName" placeholder="Last Name" > </br>
+</br>
+<h2> Items: </h2>
+<b>Cotton Shirt:</b> £20 per shirt. Quantity: <input type="number" min="0" max="5" name="cottonQuantity" id="cottonQ"> </br>
+<b>Silk Tie:</b> £13 per shirt. Quantity: <input type="number" min="0" max="5" name="silkQuantity" id="silkQ"> </br>
+</br>
+<h2> Select customer status: </h2>
+
+<!-- Drop down menu -->
+<select name="customerStatus "id="customerStatus">
+	<option value="nonCus">Non-Registered Customer</option>
+	<option value="tradeCus">Trade Customer</option>
+	<option value="regCus">Registered Customer</option>
+</select>
+</br>
+</br>
+<h2> Select Delivery: </h2>
+
+<!-- Radio Buttons -->
+<input type="radio" value="3" name="radioChoice" checked>Standard: 7-Day (£2 per order)<br>
+<input type="radio" value="2" name="radioChoice">Rush: 3-Day (£3 per order) <br>
+<input type="radio" value="5" name="radioChoice">Super Rush:  Next Day (£5 per order) <br>
+
+</br>
+</br>
+<h2> Check your order: </h2>
+<input type="button" value="Check Order" id="orderComplete" onclick="orderComplete">
+</form> 
+</br>
+<p id="userGreeting"> </p>
+<p id="features"> </p>
+</div>
+<script>
+
+
+document.getElementById("orderComplete").addEventListener( "click", orderComplete);
+function orderComplete() {
+var fName = document.getElementById("fName").value;
+var lName = document.getElementById("lName").value;
+var cottonCost = 20;
+var silkCost = 13;
+var cottonQ = document.getElementById("cottonQ").value;
+var silkQ = document.getElementById("silkQ").value;
+var discount = 0;
+var cusStatus = document.getElementById("customerStatus").value;
+// getting data from dropdown
+if (cusStatus == "nonCus") {
+    var discount = 0;
+} else if (cusStatus == "tradeCus") {
+    var discount = 0.2;
+} else if (cusStatus == "regCus") {
+    var discount = 0.1;
+}
+// Valadation for input fields
+if (fName == "") {
+window.alert("First Name must be filled out");
+    return;
+} else if (lName == "") {
+window.alert("Last Name must be filled out");
+    return;
+}
+// getting data from Radio Buttons 
+var radioChoice = document.getElementById("orderForm").radioChoice;
+var radioValue = "";
+for (var i = 0; i < radioChoice.length; i++) {
+	if (radioChoice[i].checked) {
+	radioValue = radioChoice[i].value;
+	break; 
+	}
+} if (radioValue == 3) {
+	var deliveryMessage = "The delivery charge is £3 (You have standard delivery (within 7 days)";
+} else if (radioValue == 2) {
+	var deliveryMessage = "The delivery charge is £2 (You selected delivery rush delivery (within 3 days))";
+} else if (radioValue == 5) {
+	var deliveryMessage = "The delivery charge is £5 (You selected super rush delivery (next day))";
+	}
+// Variables for calculating total
+var discountAmount = ((silkQ * silkCost) + (cottonQ * cottonCost)) * discount;
+var delCost = parseInt(radioValue);
+var totalAmount =  (silkQ * silkCost) + (cottonQ * cottonCost);
+var totalAmountD = totalAmount + delCost;
+var totalCostDiscount = Math.floor(totalAmount - discountAmount);
+var totalCostDiscountD = totalCostDiscount + delCost;
+var discountMessage = ("You have qualifed for a discount! Amount £" + Math.ceil(discountAmount) + " (Delivery cost is not included in this discount)");
+    // making words plural or singular based on quantity
+if (cottonQ <= 1) {
+    var cottonName = "shirt";
+} else {
+    var cottonName = "shirts"
+} if (silkQ <= 1) {
+    var silkName = "tie";
+} else {
+    var silkName = "ties"
+}
+    // if quantity is 0 then it wont show (tie)
+if (silkQ == 0) {
+    var tieMessage = ""
+} else {
+    var tieMessage = silkQ + " " + silkName + " @ £13 each. Subtotal: £" + (silkQ * silkCost) + "</br>";
+}
+    // if quantity is 0 then it wont show (shirt)
+if (cottonQ == 0) {
+    var cottonMessage = ""
+} else {
+    var cottonMessage = cottonQ + " " + cottonName + " @ £20 each. Subtotal: £" + (cottonQ * cottonCost) + "</br>";
+}
+// if nothing is orderd than window alert
+if (silkQ == "" && cottonQ == "") {
+window.alert("Please buy something before proceeding");
+return;
+} else if ( silkQ == 0 && cottonQ == 0) {
+window.alert("Please buy something before proceeding");
+    return;
+}
+// Checking if discount is being applied    
+if (discount > 0.01) {    
+// discount customers
+userGreeting.innerHTML = "Hello " + fName + " " + lName + "!" + " You have selected:" + "</br>" + cottonMessage + tieMessage + discountMessage + "</br>" +  deliveryMessage + "</br>" + "<b>" + "The total cost is: £" + totalCostDiscountD + "</b>" + "</br>" + "<i>" + "If you are happy with that, Please go ahead and place the order. Have a nice day!" + "</i>";  
+} else {
+// Non-discount customers
+var totalAmount = ((silkQ * silkCost) + (cottonQ * cottonCost));
+    userGreeting.innerHTML = "Hello " + fName + " " + lName + "!" + " You have selected:" + "</br>" + cottonMessage + tieMessage + deliveryMessage + "</br>" + "<b>" + "The total cost is: £" + totalAmountD + "</br>" + "</b>" + "<i>" + "If you are happy with that, Please go ahead and place the order. Have a nice day!" + "</i>";
+}
+    
+features.innerHTML = "</br>" + "</br>" +"Features include:" + "</br>" + "-Name verifcation" + "</br>" + "-Quantity verifcation" + "</br>" + "-Plural and singular words for ordered items" + "</br>" + "Also much more to add in the near future." + "</br>" + "Notes: variable names are a bit unlogical. Derren has told me to look at this for next time. i have noted this and will use more logical ones next time"
+// Debug
+/* 
+console.log(radioChoice);
+console.log(radioValue);
+console.log(radioValue);
+console.log(fName);
+console.log(lName);
+console.log(cottonQ);
+console.log(silkQ);
+console.log(cusStatus);
+console.log(discount);
+*/
+}
+</script>
+</body>

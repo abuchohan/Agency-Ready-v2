@@ -1,0 +1,27 @@
+{
+  "The House Planks" : 
+  {
+    "Description":"Pâté & spiced fruit chutney – seared chicken breast & house curry cream – mince & spuds – chipotle & sweet chilli glazed ribs – chip shop fish & mushy peas – artisan bread & butter.",
+    "Price":"16.95"
+  },
+  "British Beef Cottage Pie" : 
+  {
+    "Description":"Prime mince slowly braised down in real gravy – mash – Vimto red cabbage.",
+    "Price":"13.95"
+  },
+  "Chicken Schnitzel" : 
+  {
+    "Description":"Flattened chicken, dusted with a herb crumb – fried potatoes & house coleslaw.",
+    "Price":"13.95"
+  },
+  "Fish and Chips" : 
+  {
+    "Description":"Fresh beer battered fish – real chips – mushy peas & thick buttered white bread.",
+    "Price":"9.95"
+  },
+  "Grilled Veal Cutlet" : 
+  {
+    "Description":"Lemon hollandaise, gremolata & house leaves.",
+    "Price":"22.95"
+  } 
+}

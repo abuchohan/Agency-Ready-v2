@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+
+<head>
+    <meta charset="utf-8">
+    <title> Piccadilly Records - Student Search</title>
+    <meta name="description" content="#">
+    <meta keywords="Manchester, students,Northern Quarter, *ADD MORE*">
+    <meta name="geo.position" content="53.4825;2.2345">
+    <meta name="geo.placename" content="Manchester Northern Quarter">
+<!--DOUBLE CHECK THIS TAG -->
+    <meta name="geo.region" content="ISO 3166-2:GB">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="CSS/stylesheet.css" type="text/css" media="all">
+</head>
+<body>
+<!-- Skiplinks --> 
+<a class="skip-link screen-reader-text" href="#content">Skip to content</a>
+<a class="skip-link screen-reader-text" href="#navigation">Skip to navigation</a>
+<!-- Navagation -->
+   <nav class="page-nav" id="navigation" role="navigation">
+        <ul class="topnav" id="myTopnav">
+            <li class="studentsearch"><a href="index.htm" title="#">Student Search</a></li>
+			<div class="floatright">
+            <li class="bars"><a href="bars.htm" title="#">Bars</a></li>
+            <li class="food"><a href="food.htm" title="#">Food</a></li>
+            <li class="music"><a href="music.htm" title="#">Music</a></li>
+            <li class="clubs"><a href="clubs.htm" title="#">Clubs</a></li>
+            <li class="shops"><a href="shops.htm" title="#">Shops</a></li>
+            <li class="aboutus"><a href="aboutus.htm" title="#">About us</a></li>
+			</div>
+            <li class="icon">
+    <a href="javascript:void(0);" onclick="myFunction()">
+    <div class="hamburger hamburger--spring">
+    <div class="hamburger-box">
+    <div class="hamburger-inner">
+    </div>
+    </div>
+  </div></a>
+  </li>
+        </ul>
+    </nav>
+    <script>
+  
+    var forEach=function(t,o,r){if("[object Object]"===Object.prototype.toString.call(t))for(var c in t)Object.prototype.hasOwnProperty.call(t,c)&&o.call(r,t[c],c,t);else for(var e=0,l=t.length;l>e;e++)o.call(r,t[e],e,t)};
+
+    var hamburgers = document.querySelectorAll(".hamburger");
+    if (hamburgers.length > 0) {
+      forEach(hamburgers, function(hamburger) {
+        hamburger.addEventListener("click", function() {
+          this.classList.toggle("is-active");
+        var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
+        }, false);
+      });
+    }
+  </script>
+<!-- Body Content -->
+    <main class="main-content" id="content" role="main">
+   <div class="hero-container">
+    <div class="hero" style="background-image:url(images/heroimages/music/musicitem1.jpg);">
+        <div class="dummy"><p>Piccadilly Records</p></div>
+    </div>
+</div>
+        <div class="aboutcontent">
+        <p>Being one of the best record shops in the Northern Quarter, it’s no doubt that it plays a major role in Record Store Day (google it, it’s amazing). Piccadilly Records offers a wide variety of music for all different styles and tastes of music, with super helpful staff and plenty of available merchandise to go with your new vinyl you can’t put a foot wrong here. Piccadilly Records has to be one of the best locations in the Northern Quarter, whether you’re a music lover or not.</p>
+            
+            <p>If you’re looking for more information and want to check out their site,  <a href="https://www.piccadillyrecords.com/counter/index.php">click here</a></p>
+
+            </div>
+        <div class="reviewparent">
+        <h2>Reviews</h2>
+            <hr>
+            <div class="review-content">
+            <div class="review">
+           <img src="images/reviews/Abi.png" alt="close up image of Jonathan Dickins" class="review-image">
+           <div class= review-text>
+            <h3>Abi</h3>
+            <p>I love visiting Piccadilly Records to expand my vinyl collection. I already have over 100 records so I love to nip in and talk to the people that work there to get their recommendations. The prices are more than fair and the collections they have instore are unreal. Whether you’re new to vinyl or looking to build on your collection, you’re bound to love my favourite record shop in Manchester.</p>
+                </div>
+                </div>
+            </div>
+        </div>
+        </br>
+    </main>
+<!-- Footer -->
+    <footer class="page-footer" role="contentinfo"> 
+        <p>&copy; <a href="http://www.mmu.ac.uk/" title="MMU homepage">MMU 2017</a> | THIS IS STUDENT COURSEWORK | TUTOR <a href="mailto:r.eskins@mmu.ac.uk">Richard Eskins</a> | <a href="http://validator.w3.org/check?uri=referer" title="W3C HTML Validation Service">Valid HTML</a> </p>
+    </footer>
+</body>
+</html>
+
+
+
+
+
+
+
+

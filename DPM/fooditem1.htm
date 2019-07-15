@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+
+<head>
+    <meta charset="utf-8">
+    <title>Northern Soul - Student Search </title>
+    <meta name="description" content="#">
+    <meta keywords="Manchester, students,Northern Quarter, *ADD MORE*">
+    <meta name="geo.position" content="53.4825;2.2345">
+    <meta name="geo.placename" content="Manchester Northern Quarter">
+<!--DOUBLE CHECK THIS TAG -->
+    <meta name="geo.region" content="ISO 3166-2:GB">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="CSS/stylesheet.css" type="text/css" media="all">
+</head>
+<body>
+<!-- Skiplinks --> 
+<a class="skip-link screen-reader-text" href="#content">Skip to content</a>
+<a class="skip-link screen-reader-text" href="#navigation">Skip to navigation</a>
+<!-- Navagation -->
+   <nav class="page-nav" id="navigation" role="navigation">
+        <ul class="topnav" id="myTopnav">
+            <li class="studentsearch"><a href="index.htm" title="#">Student Search</a></li>
+			<div class="floatright">
+            <li class="bars"><a href="bars.htm" title="#">Bars</a></li>
+            <li class="food"><a href="food.htm" title="#">Food</a></li>
+            <li class="music"><a href="music.htm" title="#">Music</a></li>
+            <li class="clubs"><a href="clubs.htm" title="#">Clubs</a></li>
+            <li class="shops"><a href="shops.htm" title="#">Shops</a></li>
+            <li class="aboutus"><a href="aboutus.htm" title="#">About us</a></li>
+			</div>
+            <li class="icon">
+    <a href="javascript:void(0);" onclick="myFunction()">
+    <div class="hamburger hamburger--spring">
+    <div class="hamburger-box">
+    <div class="hamburger-inner">
+    </div>
+    </div>
+  </div></a>
+  </li>
+        </ul>
+    </nav>
+    <script>
+  
+    var forEach=function(t,o,r){if("[object Object]"===Object.prototype.toString.call(t))for(var c in t)Object.prototype.hasOwnProperty.call(t,c)&&o.call(r,t[c],c,t);else for(var e=0,l=t.length;l>e;e++)o.call(r,t[e],e,t)};
+
+    var hamburgers = document.querySelectorAll(".hamburger");
+    if (hamburgers.length > 0) {
+      forEach(hamburgers, function(hamburger) {
+        hamburger.addEventListener("click", function() {
+          this.classList.toggle("is-active");
+        var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
+        }, false);
+      });
+    }
+  </script>
+<!-- Body Content -->
+    <main class="main-content" id="content" role="main">
+   <div class="hero-container">
+    <div class="hero" style="background-image:url(images/heroimages/food/fooditem1.jpg);">
+        <div class="dummy"><p>Northern Soul</p></div>
+    </div>
+</div>
+        <div class="aboutcontent">
+        <p>It’s toasted bread. It’s melted cheese. It’s a match made in heaven and a heart attack waiting to happen and, IT. TASTES. SO. GOOD. Without doubt one of the best places to eat in the city let alone the Northern Quarter. If you’re feeling extra hungry why not try the mac and cheese grilled cheese (yes, you read me right) or the pulled pork grilled cheese, if not, the classic is equally as amazing and just as cheesy. With super affordable prices and such delicious food, could a student ask for more? Because after all, who doesn’t love carbs and cheese?!  </p> 
+<p>Sadly, they don’t have a website available, so here’s their Uber Eats page for you to have a look at while you drool over the thought of the mac and cheese grilled  cheese <a href="https://www.ubereats.com/stores/a8ac3bf1-5898-4590-881f-b7ce9c1fb042/?adg_id=38976287446&cid=761801963&cre=181848423292&dclid=COrh4uz7y9ICFQ8i0wodWmYAag&dev=c&dev_m=&fi_id=&gclid=CLHX2uz7y9ICFcHWGwodjWEEQg&gclsrc=ds&kw=northern+soul+grilled+cheese&kwid=kwd-285827183645&match=e&net=g&placement=&tar=&utm_campaign=search-google-nonbrand_184_211_gb-manchester_er_txt_acq_cpc_en-gb_northern+soul+grilled+cheese_kwd-285827183645_181848423292_38976287446_e_c_track-feb22generalupdate_restructure&utm_source=AdWords_NonBrand ">link to Uber Eats</a>  </p>
+            
+
+            </div>
+        <div class="reviewparent">
+        <h2>Reviews</h2>
+            <hr>
+            <div class="review-content">
+            <div class="review">
+           <img src="images/reviews/Alastair.png" alt="close up image of Jonathan Dickins" class="review-image">
+           <div class= review-text>
+            <h3>Alastair</h3>
+            <p>The best place to eat in the North West let alone the Northern Quarter. They literally just serve carbs and cheese and its pretty glorious. My favourite has to be the grilled cheese that’s filled with mac and cheese, the best hangover cure known to man and also just a delicious meal. They’re about as cheap as a meal deal and 100 times better, trust me you’re guaranteed to love this.</p>
+                </div>
+                </div>
+            </div>
+        </div>
+        
+    </main>
+<!-- Footer -->
+    <footer class="page-footer" role="contentinfo"> 
+        <p>&copy; <a href="http://www.mmu.ac.uk/" title="MMU homepage">MMU 2017</a> | THIS IS STUDENT COURSEWORK | TUTOR <a href="mailto:r.eskins@mmu.ac.uk">Richard Eskins</a> | <a href="http://validator.w3.org/check?uri=referer" title="W3C HTML Validation Service">Valid HTML</a> </p>
+    </footer>
+</body>
+</html>
+
+
+
+
+
+
+
+

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+
+<head>
+    <meta charset="utf-8">
+    <title>Afflecks - Student Search </title>
+    <meta name="description" content="#">
+    <meta keywords="Manchester, students,Northern Quarter, *ADD MORE*">
+    <meta name="geo.position" content="53.4825;2.2345">
+    <meta name="geo.placename" content="Manchester Northern Quarter">
+<!--DOUBLE CHECK THIS TAG -->
+    <meta name="geo.region" content="ISO 3166-2:GB">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="CSS/stylesheet.css" type="text/css" media="all">
+</head>
+<body>
+<!-- Skiplinks --> 
+<a class="skip-link screen-reader-text" href="#content">Skip to content</a>
+<a class="skip-link screen-reader-text" href="#navigation">Skip to navigation</a>
+<!-- Navagation -->
+   <nav class="page-nav" id="navigation" role="navigation">
+        <ul class="topnav" id="myTopnav">
+            <li class="studentsearch"><a href="index.htm" title="#">Student Search</a></li>
+			<div class="floatright">
+            <li class="bars"><a href="bars.htm" title="#">Bars</a></li>
+            <li class="food"><a href="food.htm" title="#">Food</a></li>
+            <li class="music"><a href="music.htm" title="#">Music</a></li>
+            <li class="clubs"><a href="clubs.htm" title="#">Clubs</a></li>
+            <li class="shops"><a href="shops.htm" title="#">Shops</a></li>
+            <li class="aboutus"><a href="aboutus.htm" title="#">About us</a></li>
+			</div>
+            <li class="icon">
+    <a href="javascript:void(0);" onclick="myFunction()">
+    <div class="hamburger hamburger--spring">
+    <div class="hamburger-box">
+    <div class="hamburger-inner">
+    </div>
+    </div>
+  </div></a>
+  </li>
+        </ul>
+    </nav>
+    <script>
+  
+    var forEach=function(t,o,r){if("[object Object]"===Object.prototype.toString.call(t))for(var c in t)Object.prototype.hasOwnProperty.call(t,c)&&o.call(r,t[c],c,t);else for(var e=0,l=t.length;l>e;e++)o.call(r,t[e],e,t)};
+
+    var hamburgers = document.querySelectorAll(".hamburger");
+    if (hamburgers.length > 0) {
+      forEach(hamburgers, function(hamburger) {
+        hamburger.addEventListener("click", function() {
+          this.classList.toggle("is-active");
+        var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
+        }, false);
+      });
+    }
+  </script>
+<!-- Body Content -->
+    <main class="main-content" id="content" role="main">
+   <div class="hero-container">
+    <div class="hero" style="background-image:url(images/heroimages/shops/shopsitem1.jpg);">
+        <div class="dummy"><p>Afflecks</p></div>
+    </div>
+</div>
+        <div class="aboutcontent">
+        <p>With well over 50 shops and stalls inside, and set in the heart of the Northern Quarter, Affleck’s Palace is Manchester’s Arndale centre for the alternative. With everything from clothing shops to tattoo parlours, Affleck’s offers a whole new world of alternative retail for any taste or budget. As well as playing host to American candy stores, the place is a haven for gamers and cosplayers alike. If you’re looking for clothes, any type can be found here, including vintage and plus size. Cafés and poster shops are also dotted around the numerous floors so be sure to fully explore the building to get the maximum out of your Affleck’s experience.</p> 
+<p>For more info, go to their website <a href="http://www.afflecks.com/ ">http://www.afflecks.com/</a></p>
+            
+
+            </div>
+        <div class="reviewparent">
+        <h2>Reviews</h2>
+            <hr>
+            <div class="review-content">
+            <div class="review">
+           <img src="images/reviews/Jaye.png" alt="close up image of Jonathan Dickins" class="review-image">
+           <div class= review-text>
+            <h3>Jaye</h3>
+            <p>I love to go to Affleck’s for the clothes, visiting the vintage shops is my favourite thing to do just because the stock is constantly changing so there’s always something new to see. I normally don’t spend over a tenner on something unless it’s really unique so I love that its cheap. It’s a great place to go because you can literally have a full day in there, like there’s the bars and the cafés, I even got a great henna tattoo in there once. I love it because you can have a full day out for nothing, or spend a bit on something if you love it but it’s really student friendly. The American candy store is great and my friend got a tattoo in there a couple of weeks ago. Deffo an essential to visit if you’re checking out the Northern Quarter or are even just in the city centre for a bit. </p>
+                </div>
+                </div>
+            </div>
+        </div>
+    </main>
+<!-- Footer -->
+    <footer class="page-footer" role="contentinfo"> 
+        <p>&copy; <a href="http://www.mmu.ac.uk/" title="MMU homepage">MMU 2017</a> | THIS IS STUDENT COURSEWORK | TUTOR <a href="mailto:r.eskins@mmu.ac.uk">Richard Eskins</a> | <a href="http://validator.w3.org/check?uri=referer" title="W3C HTML Validation Service">Valid HTML</a> </p>
+    </footer>
+</body>
+</html>
+
+
+
+
+
+
+
+

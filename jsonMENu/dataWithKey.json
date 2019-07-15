@@ -1,0 +1,27 @@
+{
+  "Rubber Soul" : 
+  {
+    "artist":"The Beatles",
+    "year":"1965"
+  },
+  "Revolver" : 
+  {
+    "artist":"The Beatles",
+    "year":"1966"
+  },
+  "Pet Sounds" : 
+  {
+    "artist":"The Beach Boys",
+    "year":"1966"
+  },
+  "Blonde on Blonde" : 
+  {
+    "artist":"Bob Dylan",
+    "year":"1966"
+  },
+  "Younger than Yesterday" : 
+  {
+    "artist":"The Byrds",
+    "year":"1967"
+  } 
+}

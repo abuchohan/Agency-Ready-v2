@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+
+<head>
+    <meta charset="utf-8">
+    <title> Food - Student Search - Northern Quarter</title>
+    <meta name="description" content="#">
+    <meta keywords="Manchester, students,Northern Quarter, *ADD MORE*">
+    <meta name="geo.position" content="53.4825;2.2345">
+    <meta name="geo.placename" content="Manchester Northern Quarter">
+<!--DOUBLE CHECK THIS TAG -->
+    <meta name="geo.region" content="ISO 3166-2:GB">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="CSS/stylesheet.css" type="text/css" media="all">
+</head>
+<body class="foodpage">
+
+<!-- Skiplinks --> 
+  
+   <a class="skip-link screen-reader-text" href="#content">Skip to content</a>
+    <a class="skip-link screen-reader-text" href="#navigation">Skip to navigation</a>
+    
+<!--NAVIGATION--> 
+   <nav class="page-nav" id="navigation" role="navigation">
+        <ul class="topnav" id="myTopnav">
+             <li class="studentsearch"><a href="index.htm" title="#">Student Search</a></li>
+			<div class="floatright">
+            <li class="bars"><a href="bars.htm" title="#">Bars</a></li>
+            <li class="food"><a href="food.htm" title="#">Food</a></li>
+            <li class="music"><a href="music.htm" title="#">Music</a></li>
+            <li class="clubs"><a href="clubs.htm" title="#">Clubs</a></li>
+            <li class="shops"><a href="shops.htm" title="#">Shops</a></li>
+            <li class="aboutus"><a href="aboutus.htm" title="#">About us</a></li>
+			</div>
+            <li class="icon">
+    <a href="javascript:void(0);" onclick="myFunction()">
+    <div class="hamburger hamburger--spring">
+    <div class="hamburger-box">
+    <div class="hamburger-inner">
+    </div>
+    </div>
+  </div></a>
+  </li>
+        </ul>
+    </nav>
+    <script>
+  
+    var forEach=function(t,o,r){if("[object Object]"===Object.prototype.toString.call(t))for(var c in t)Object.prototype.hasOwnProperty.call(t,c)&&o.call(r,t[c],c,t);else for(var e=0,l=t.length;l>e;e++)o.call(r,t[e],e,t)};
+
+    var hamburgers = document.querySelectorAll(".hamburger");
+    if (hamburgers.length > 0) {
+      forEach(hamburgers, function(hamburger) {
+        hamburger.addEventListener("click", function() {
+          this.classList.toggle("is-active");
+        var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
+        }, false);
+      });
+    }
+  </script>
+  
+<!-- Body Content -->
+   
+    <main class="main-content" id="content" role="main">
+         <div class="headingtext">
+        <h1>Food</h1>
+        </div>
+       <div class="centered">
+           <section class="cards">
+               <article class="card">
+                   <a href="fooditem1.htm">
+                     <figure class="thumbnail">
+                            <img src="images/used/food/WhatsApp%20Image%202017-03-06%20at%2014.48.50.jpeg" alt="A banana that looks like a bird">
+                     </figure>
+                        <div class="card-content">
+                            <h2>Northern Soul</h2>
+                            <p>It’s toasted bread. It’s melted cheese. It’s a match made in heaven and a heart attack waiting to happen and, IT. TASTES. SO. GOOD. Without doubt one of the best places to eat in the city let alone the Northern Quarter. If you’re feeling extra hungry ...</p>
+                            <h3 class="readmorefood">Read more</h3>
+                        </div>
+                    </a>
+                </article>
+
+                <article class="card">
+                    <a href="fooditem2.htm">
+                        <figure class="thumbnail">
+                            <img src="images/used/food/WhatsApp%20Image%202017-03-08%20at%2015.57.53.jpeg" alt="Norwegian boller">
+                        </figure>
+                        <div class="card-content">
+                            <h2>Home Sweet Home</h2>
+                            <p>The land of amazing cakes and shakes. Also the land of amazing breakfast food, salads, burgers and a whole host of other American inspired cuisine. A fun and aesthetically pleasing place to eat with amazing food and cake to die for...</p>
+                            <h3 class="readmorefood">Read more</h3>
+                        </div>
+                    </a>
+                </article>
+
+                <article class="card">
+                    <a href="fooditem3.htm">
+                        <figure class="thumbnail">
+                            <img src="images/used/food/WhatsApp%20Image%202017-03-08%20at%2015.58.20.jpeg" alt="A dinosaur wearing an aluminium jacket">
+                        </figure>
+                        <div class="card-content">
+                            <h2>Slice</h2>
+                            <p>Pizza, but better. Totally handmade and sold by the slice, sit down to enjoy great food, great coffee, and great company in its cosy location on Stevenson Square... </p>
+                            <h3 class="readmorefood">Read more</h3>
+                        </div>
+                    </a>
+                </article>  
+                   </a>
+               </article>
+           </section>
+        </div>
+    </main>
+<!-- Footer -->
+    <footer class="page-footer" role="contentinfo"> 
+        <p>&copy; <a href="http://www.mmu.ac.uk/" title="MMU homepage">MMU 2017</a> | THIS IS STUDENT COURSEWORK | TUTOR <a href="mailto:r.eskins@mmu.ac.uk">Richard Eskins</a> | <a href="http://validator.w3.org/check?uri=referer" title="W3C HTML Validation Service">Valid HTML</a> </p>
+    </footer>
+</body>
+</html>
+

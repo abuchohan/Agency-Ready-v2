@@ -1,0 +1,220 @@
+<html>
+<head>
+<meta charset="utf-8">
+<title>Encryptor - Abu-Hurairah Chohan</title>
+<link href="http://55060509.webdevmmu.uk/style-guide/global.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+<h1>Welcome to the encryptor</h1>
+</br>
+<form>
+
+<h2> Select encryption amount</h2>
+<select id="encryptionMethod" onchange="encryptionMethod">
+  <option value="3">3 Letters</option>
+  <option value="4">4 Letters</option>
+  <option value="5">5 Letters</option>
+</select>
+</br>
+</br>
+<h3>Encryptor</h3>
+<p>Type in a message to be encrypted here:</p>
+<textarea id="uInput" rows="4" cols="50" placeholder="Enter Text">
+</textarea>
+</br>
+<input type="button" value="Encrypt" id="encryptText" onclick="clickHandler"> 
+<p>The message you have entered has been encrypted as:</p>
+<p id=encryptOutput></p>
+</br>
+</br>
+<h3>Decryptor</h3>
+<p>Type in a message to be decrypted here:</p>
+
+<textarea id="encryptionOutput" rows="4" cols="50" placeholder="Encryption Output">
+</textarea>
+</br>
+<input type="button" value="Decrypt" id="decryptText" onclick="clickHandler1">
+<p>The message you have entered has been decrypted as:</p>
+<p id=decryptOutput></p>
+<input type="button" value="Reset Encryptor" onClick="window.location.reload()">
+</form>
+
+<script>
+// getting information from buttons then using event listener to check when they have been pressed
+document.getElementById("encryptText").addEventListener( "click", clickHandler);
+document.getElementById("decryptText").addEventListener( "click", clickHandler1);
+
+function clickHandler () {
+var sym = [" ","!","£","$","%","^","&","*","(",")","_","-","=","+","`","¬","[","]","{","}","\",","<",".",">","/","?",";",":","'","@","#","~","|"];
+var num = ["0","1","2","3","4","5","6","7","8","9"];
+var alphabet = "abcdefghijklmnopqrstuvwxyz";
+
+// getting input from text field
+var userInput = document.getElementById("uInput").value;
+
+// Picking Encryption Amount
+var encryptionAmount = document.getElementById("encryptionMethod").value;
+
+// making encryption amount a integer
+var encryptionAmountInt = parseInt(encryptionAmount);
+
+// define encryptString 
+var encryptedString = "";
+
+// loop that breaks userInput into indervidual elements
+for (i=0; i<userInput.length; i++){
+var checker = 0;
+var encryptedLetter = alphabet.indexOf(userInput[i]);
+// checking if numbers are used in userInput
+for (n=0; n<num.length; n++) {
+if (userInput[i] == num[n]) {
+window.alert("Please only use letters.");
+console.log("tx")
+var checker = 1;
+var encryptedString = "";
+document.getElementById("encryptionOutput").innerHTML = encryptedString;
+return;
+} }
+
+// loop that scans for symbols 
+for (s=0; s<sym.length; s++) {
+if (userInput[i] == sym[s]) {
+var encryptedString = encryptedString + sym[s];
+var checker = 1;
+document.getElementById("encryptionOutput").innerHTML = encryptedString;
+console.log("array SYM");
+continue;
+}continue; }
+// if statement allowing w to be encrypted when encryption amount is 4
+if (encryptionAmountInt == 4 && encryptedLetter >= 22) {
+var finalEncryptedLetter = encryptedLetter - 26 + encryptionAmountInt;
+var encryptedString = encryptedString + alphabet[finalEncryptedLetter];
+console.log("4-22");
+}
+// else if statement allowing v to be encrypted when encryption amount is 5
+else if (encryptionAmountInt == 5 && encryptedLetter >= 21) {
+var finalEncryptedLetter = encryptedLetter - 26 + encryptionAmountInt;
+var encryptedString = encryptedString + alphabet[finalEncryptedLetter];
+console.log("5-21");
+}
+// this allows xyz to be encrypted for 3
+else if (encryptedLetter >= 23) {
+var finalEncryptedLetter = encryptedLetter - 26 + encryptionAmountInt;
+var encryptedString = encryptedString + alphabet[finalEncryptedLetter];
+console.log(finalEncryptedLetter);
+console.log("xyz letters ");
+}  else if (checker == 0){ 
+var finalEncryptedLetter = encryptedLetter + encryptionAmountInt;
+console.log(checker);
+console.log("letter is before x");
+// output adds one letter for everytime the loop goes around
+var encryptedString = encryptedString + alphabet[finalEncryptedLetter];
+} 
+
+// output to text area
+document.getElementById("encryptionOutput").innerHTML = encryptedString;
+document.getElementById("encryptOutput").innerHTML = encryptedString;
+} } 
+
+function clickHandler1 () {
+var sym = [" ","!","£","$","%","^","&","*","(",")","_","-","=","+","`","¬","[","]","{","}","\",","<",".",">","/","?",";",":","'","@","#","~","|"];
+var num = ["0","1","2","3","4","5","6","7","8","9"];
+var alphabet = "abcdefghijklmnopqrstuvwxyz";
+// getting input from text field
+var userInput = document.getElementById("encryptionOutput").value;
+
+
+// Picking Encryption Amount
+var encryptionAmount = document.getElementById("encryptionMethod").value;
+
+// making encryption amount a integer
+var encryptionAmountInt = parseInt(encryptionAmount);
+
+// define encryptString 
+var encryptedString = "";
+
+// loop that breaks userInput into indervidual elements
+for (i=0; i<userInput.length; i++){
+var checker = 0;
+var encryptedLetter = alphabet.indexOf(userInput[i]);
+
+for (n=0; n<num.length; n++) {
+if (userInput[i] == num[n]) {
+window.alert("Please only enter letters");
+console.log("tx")
+var checker = 1;
+var encryptedString = "";
+document.getElementById("encryptionOutput").innerHTML = encryptedString;
+return;
+} }
+
+// loop that scans for symbols 
+for (s=0; s<sym.length; s++) {
+if (userInput[i] == sym[s]) {
+var encryptedString = encryptedString + sym[s];
+var checker = 1;
+document.getElementById("uInput").innerHTML = encryptedString;
+console.log("array SYM");
+continue;
+}continue; }
+
+if (encryptionAmountInt == 4 && encryptedLetter == 3) {
+var finalEncryptedLetter = encryptedLetter + 26 - encryptionAmountInt;
+var encryptedString = encryptedString + alphabet[finalEncryptedLetter];
+document.getElementById("uInput").innerHTML = encryptedString;
+console.log("4-3");
+checker = 1;
+}
+
+else if (encryptionAmountInt == 5 && encryptedLetter == 4) {
+var finalEncryptedLetter = encryptedLetter + 26 - encryptionAmountInt;
+var encryptedString = encryptedString + alphabet[finalEncryptedLetter];
+document.getElementById("uInput").innerHTML = encryptedString;
+checker = 1;
+console.log("5-4");
+} 
+else if (encryptionAmountInt == 5 && encryptedLetter == 3) {
+var finalEncryptedLetter = encryptedLetter + 26 - encryptionAmountInt;
+var encryptedString = encryptedString + alphabet[finalEncryptedLetter];
+document.getElementById("uInput").innerHTML = encryptedString;
+checker = 1;
+console.log("5-3");
+} 
+// this allows abc to be encrypted for 3
+if (encryptedLetter == 0) {
+console.log(encryptedLetter);
+var finalEncryptedLetter = encryptedLetter + 26 - encryptionAmountInt;
+var encryptedString = encryptedString + alphabet[finalEncryptedLetter];
+console.log("xyz letters ");
+}
+else if (encryptedLetter == 1) {
+console.log(encryptedLetter);
+var finalEncryptedLetter = encryptedLetter + 26 - encryptionAmountInt;
+var encryptedString = encryptedString + alphabet[finalEncryptedLetter];
+}
+else if (encryptedLetter == 2) {
+console.log(encryptedLetter);
+var finalEncryptedLetter = encryptedLetter + 26 - encryptionAmountInt;
+var encryptedString = encryptedString + alphabet[finalEncryptedLetter];
+}
+  else if (checker == 0){ 
+var finalEncryptedLetter = encryptedLetter - encryptionAmountInt;
+console.log(encryptedLetter);
+console.log("letter is after c");
+console.log(finalEncryptedLetter);
+// output adds one letter for everytime the loop goes around
+var encryptedString = encryptedString + alphabet[finalEncryptedLetter];
+} 
+// output to text area
+document.getElementById("uInput").innerHTML = encryptedString;
+document.getElementById("decryptOutput").innerHTML = encryptedString;
+} } 
+
+
+</script>
+
+</body>
+</html>
+
+

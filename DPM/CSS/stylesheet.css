@@ -1,0 +1,790 @@
+@import url('reset.css');
+/*--------------------------------------------------------------
+                Accessibility
+--------------------------------------------------------------*/
+
+.screen-reader-text {
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute !important;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+}
+
+.screen-reader-text:hover,
+.screen-reader-text:active,
+.screen-reader-text:focus {
+	background-color: #f1f1f1;
+	border-radius: 3px;
+	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+	clip: auto !important;
+	color: #21759b;
+	display: block;
+	font-size: 14px;
+	font-weight: bold;
+	height: auto;
+	left: 5px;
+	line-height: normal;
+	padding: 15px 23px 14px;
+	text-decoration: none;
+	top: 5px;
+	width: auto;
+	z-index: 100000; 
+    
+}
+
+/*--------------------------------------------------------------
+                    Typography
+--------------------------------------------------------------*/
+
+@font-face {
+    font-family: "BebasNeue";
+    src: url("../type/BebasNeue.eot");
+    src: url("../type/BebasNeue.otf");
+       src: url("../type/BebasNeue.woff")
+        local("BebasNeue"),
+            format("opentype");
+}
+
+/*--------------------------------------------------------------
+                   Background images
+--------------------------------------------------------------*/
+
+body.indexpage {
+background-image: url("../images/backgroundimages/nqbg.jpg");
+}
+
+body.barspage {
+background-image: url("../images/backgroundimages/background-bars.jpeg");
+}
+
+body.foodpage {
+background-image: url("../images/backgroundimages/background-food.jpg");
+}
+
+body.musicpage {
+background-image: url("../images/backgroundimages/background-music.jpeg");
+}
+
+body.shopspage {
+background-image: url("../images/backgroundimages/background-shops.jpeg");
+}
+
+body.clubspage {
+background-image: url("../images/backgroundimages/background-clubs.jpeg");
+}
+
+/*--------------------------------------------------------------
+                    Typography
+--------------------------------------------------------------*/
+.headingtext {
+color: #FFF;
+text-align: center;
+font-size: 2.3em;;
+margin: 0 0;
+    height: auto;
+    padding: 0;}
+
+@media (min-width: 600px) {
+    .headingtext {
+    font-size: 3.5rem;
+    }
+}
+
+h1 {
+margin: 0.2em;}
+
+h1, h2, h3, li, .dummy {
+    font-family: BebasNeue; }
+
+body,
+button,
+input,
+select,
+textarea {
+	
+	font-family: ,'Helvetica', Arial, sans-serif;
+	font-size: 18px;
+	line-height: 1.5;
+}
+dfn,
+cite,
+em,
+i {
+	font-style: italic;
+}
+
+pre {
+	background: #eee;
+	font-family: "Courier 10 Pitch", Courier, monospace;
+	font-size: 15px;
+	font-size: 1.5rem;
+	line-height: 1.6;
+	margin-bottom: 1.6em;
+	max-width: 100%;
+	overflow: auto;
+	padding: 1.6em;
+}
+
+code,
+kbd,
+tt,
+var {
+	font: 15px Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+}
+
+abbr,
+acronym {
+	border-bottom: 1px dotted #666;
+	cursor: help;
+}
+
+mark,
+ins {
+	background: #fff9c0;
+	text-decoration: none;
+}
+
+sup,
+sub {
+	font-size: 75%;
+	height: 0;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+
+sup {
+	bottom: 1ex;
+}
+
+sub {
+	top: .5ex;
+}
+
+small {
+	font-size: 75%;
+}
+
+big {
+	font-size: 125%;
+}
+/*--------------------------------------------------------------
+                    images
+--------------------------------------------------------------*/
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.aboutimg {
+font-size: 5rem;
+    max-width: 100%;
+height: auto;
+text-align: center;
+background-image: url("/images/bananas_2-wallpaper-2560x1080.jpg")
+}
+
+
+/* Responsive image 
+.aboutcontent p {
+    border: 10px;
+    background: white;
+}
+*/
+
+
+@media screen and (max-width: 863px) {
+    .aboutcontent p {
+        max-width: 80%;
+    }
+    
+}
+
+@media screen and (min-width: 863px) {
+    .aboutcontent p {
+        padding-top: 30px;
+        max-width: 800px;
+    }
+}
+.aboutcontent p {
+    margin: 0 auto;
+}
+
+/*---------------------------Reviews------------------------------*/
+.reviewparent {
+padding: 50px 25px;}
+
+.review {
+    border-radius: 20px;
+    padding-top: 30px;
+    margin: 0 auto;
+  
+}
+.review img {
+    display: block;
+    margin: 0 auto;
+}
+.review h3 {
+    margin: 0;
+}
+
+.review{
+    margin-bottom: 0 auto;
+}
+
+
+@media screen and (min-width: 991px) {
+.review  {
+       display: flex;
+       flex-wrap: wrap;
+       max-height: 300px;
+       max-width: 1100px;
+       flex-direction: row;
+       padding-bottom: 20px;
+    }
+    .review-text {
+        flex: 2; 
+    }
+    .review-image {
+        flex: 1;
+        max-width:300px;
+        padding-right: 20px;
+    } 
+}
+
+@media screen and (max-width: 991px) {
+    .review  {
+       display: flex;
+       flex-wrap: wrap;
+       max-width: 80%;
+       flex-direction: column;
+       padding-bottom: 20px;
+    }
+    .review h3 {
+        text-align: center;
+        margin-top: 20px;
+    }
+    .review-text {
+        flex: 2; 
+    }
+    .review-image {
+        flex: 1;
+        max-width:300px;
+        max-height: 300px;
+        padding-right: 20px;
+    } 
+}
+
+
+/*--------------------------------------------------------------
+                    Navagation
+--------------------------------------------------------------*/
+ul.topnav {
+  list-style-type: none;
+    margin: 0;
+  padding: 0px;
+  overflow: hidden;
+  background-color: black;
+}
+
+ul.topnav li {float: left;}
+
+ul.topnav li a {
+  display: inline-block;
+  color: #f2f2f2;
+  text-align: center;
+    : 22px;
+  padding: 25px 15px;
+  text-decoration: none;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/*-------Hover Over Colours-------*/
+
+.studentsearch:hover {
+background-color: #C67127;}
+.bars:hover {
+background-color: #F9BE07;}
+.food:hover {
+background-color: #AD1917;}
+.music:hover {
+background-color: #CF3A8D;}
+.clubs:hover {
+background-color: #3C4998;}
+.shops:hover {
+background-color: #86BE4E;}
+.aboutus:hover {
+background-color: #C67127;}
+
+
+@media screen and (max-width:680px) {
+    .bars, .food, .music, .clubs, .shops, .aboutus {
+display: none;}
+  ul.topnav li.icon {
+    float: right;
+    display: inline-block;
+  }
+}
+
+@media screen and (max-width:680px) {
+    .bars:hover  {
+        background: #FFF;
+    }}
+
+
+@media screen and (min-width:681px) {
+    .floatright {
+float: right;}
+    ul.topnav li.icon {
+    display: none;
+  }
+  }
+
+@media screen and (max-width:680px) {
+  ul.topnav.responsive {position: relative;}
+  ul.topnav.responsive li.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  ul.topnav.responsive li {
+    float: none;
+    display: inline;
+  }
+  ul.topnav.responsive li a {
+    display: block;
+    text-align: left;
+  }
+     ul.topnav.responsive li a {
+    display: block;
+    text-align: left;
+  }
+    .studentsearch a:hover {
+        background: #C67127;
+    }
+    .bars a:hover{
+    background: #F9BE07;;}
+    .food a:hover{
+    background: #AD1917;}
+    .music a:hover{
+    background: #CF3A8D;}
+    .clubs a:hover{
+    background: #3C4998;}
+    .shops a:hover{
+    background: #86BE4E;}
+    .aboutus a:hover{
+    background: #C67127;}
+    
+}
+
+/*--------------------------------------------------------------
+                      Navagation
+--------------------------------------------------------------*/
+
+
+
+@media screen and (max-width:680px) {
+  ul.topnav.responsive {position: relative;}
+  ul.topnav.responsive li.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  ul.topnav.responsive li {
+    float: none;
+    display: inline;
+  }
+  ul.topnav.responsive li a {
+    display: block;
+    text-align: left;
+  }
+.studentsearch
+    .bars:hover {
+background-color: #F9BE07;}
+.food:hover {
+background-color: #AD1917;}
+.music:hover {
+background-color: #CF3A8D;}
+.clubs:hover {
+background-color: #3C4998;}
+.shops:hover {
+background-color: #86BE4E;}
+.aboutus:hover {
+background-color: #C67127;}
+}
+
+
+.hamburger {
+    display: flex;
+    height: none;
+  cursor: pointer;
+  transition-property: opacity, filter;
+  transition-duration: 0.15s;
+  transition-timing-function: linear;
+  font: inherit;
+  color: inherit;
+  text-transform: none;
+  background-color: transparent;
+  border: 0;
+  margin: 0;
+  overflow: visible; }
+  .hamburger:hover {
+    opacity: 0.7; }
+
+.hamburger-box {
+  width: 40px;
+  height: 24px;
+  display: inline-block;
+  position: relative; }
+
+.hamburger-inner {
+  display: block;
+  top: 50%;
+  margin-top: -2px; }
+  .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+    width: 42px;
+    height: 5px;
+    background-color: white;
+    border-radius: 5px;
+    position: absolute;
+    transition-property: transform;
+    transition-duration: 0.15s;
+    transition-timing-function: ease; }
+  .hamburger-inner::before, .hamburger-inner::after {
+    content: "";
+    display: block; }
+  .hamburger-inner::before {
+    top: -10px; }
+  .hamburger-inner::after {
+    bottom: -10px; }
+
+/*--------------------------------------------------------------
+                    Layouts
+--------------------------------------------------------------*/
+
+.centered {
+    margin: 0 auto;
+    padding: 0 1em;
+}
+
+@media screen and (min-width: 52em) {
+    .centered {
+        max-width: 70em;
+        
+    }
+}
+
+/*--------------------------------------------------------------
+                    Home Grid
+--------------------------------------------------------------*/
+
+
+.logoimage{
+    padding-top: 2em;
+/*---------------------GRID STYLING----------------------------*/
+    
+}
+.flex-grid {
+  display: flex;
+
+}
+.flex-grid .grid-cell {
+  flex: 1;
+  font-size: 1.5em;
+}
+.flex-grid-2 {
+  display: flex;
+}
+.flex-grid-2 .grid-cell {
+  flex: 1;
+  font-size: 1.5em;
+}
+@media screen and (max-width: 620px) {
+  .flex-grid,.flex-grid-2 {
+    display: block;
+  }
+    
+    flex-grid .grid-cell{
+        max-width: 320px;
+    }
+}
+* {
+  box-sizing: border-box;
+}
+
+.grid-cell a {
+	display: block;
+	text-decoration: none;
+	color: white;
+	padding: 1em 1em;
+    text-align: center;
+    box-shadow: 4px 4px 1px #282827;
+}
+.grid-cell {
+	list-style-type: none;
+	padding: 20px;
+  
+  
+}
+
+
+
+/*---------------WORK ON THIS SENPAI--------------*/
+
+
+.indexbars {
+    background: #F9BE07;
+} 
+.indexbars:hover{
+    filter: brightness(80%);
+}
+.indexfood  {
+    background: #AD1917;
+} 
+.indexfood:hover{
+    filter: brightness(80%);
+}
+.indexmusic {
+    background:#CF3A8D;
+} 
+.indexmusic:hover{
+    filter: brightness(80%);
+}
+.indexclubs {
+    background:#3C4998;
+} 
+.indexclubs:hover{
+    filter: brightness(80%);
+}
+.indexshops {
+    background:#86BE4E;
+}
+.indexshops:hover{
+    filter: brightness(80%);
+}
+
+/*--------------------------------------------------
+          Card Based Layout - Base styles 
+---------------------------------------------------*/
+
+
+.masthead {
+	background: hsl(0, 0%, 20%);`
+}
+
+.site-title {
+	color: white;
+}
+
+.card {
+	background: white;
+	margin-bottom: 2em;	
+}
+
+.card a {
+	color: black;
+	text-decoration: none;
+}
+
+.card a:hover {
+	box-shadow: 3px 3px 8px hsl(0, 0%, 70%);
+}
+
+.card-content {
+	padding: 1.4em;
+}
+
+.card-content h2 {
+	margin-top: 0;
+	margin-bottom: .5em;
+}
+
+.card-content p {
+	font-size: 95%;
+}
+
+.readmorebars {
+display:flex;
+justify-content:bottom;
+margin-bottom: 0em;
+color: #F9BE07;}
+
+.readmorefood {
+display:flex;
+justify-content:bottom;
+margin-bottom: 0em;
+color: #AD1917;}
+
+.readmoremusic {
+display:flex;
+justify-content:bottom;
+margin-bottom: 0em;
+color: #CF3A8D;}
+
+.readmoreclubs {
+display:flex;
+justify-content:bottom;
+margin-bottom: 0em;
+color: #3C4998;}
+
+.readmoreshops {
+display:flex;
+justify-content:bottom;
+margin-bottom: 0em;
+color: #86BE4E;}
+
+
+/*--------------------------------------------------------------
+                    Flexbox
+--------------------------------------------------------------*/
+.centered {
+padding-bottom: 1em;}
+.cards {
+        padding-top: 1em;
+    }
+.header h1{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        font-size: 100px;
+    }
+
+@media screen and (min-width:40em) {
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 6em;
+    justify-content: space-between;
+    
+}
+.card {
+    display: flex;
+    flex: 0 1 calc(50% - 0.5em);
+    }
+} 
+
+@media screen and (min-width: 60em) {
+    
+    .card {
+    flex: 0 1 calc(34% - 1em);
+    }
+}
+
+/*--------------------------------------------------------------
+                    Footer
+--------------------------------------------------------------*/    
+
+.page-footer {
+	padding: .4em 1em;
+    margin-top: 50px;
+	text-align: center;
+    color: #fff;
+	background: black;
+}
+/*--------------------------------------------------------------
+                    Links
+--------------------------------------------------------------*/  
+.page-footer a:link{
+    color: white;
+}
+.page-footer a:visited{
+    color: white;
+}
+.page-footer a:hover{
+    color: antiquewhite;
+}
+
+.hero-container { background-color: #fff; }
+ 
+.hero {
+    position: relative;
+    overflow: hidden;
+    background: url() no-repeat scroll 50% 50%;
+    background-size: 100% auto;
+    max-height: 420px;
+    
+}
+ 
+.hero {
+    margin-bottom: 25px;;
+    
+    
+}
+ 
+.hero-container .dummy p  {
+    color: #FFF;
+    position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+}
+
+/* MEDIA QUERIES - extend if needed */
+@media only screen and (min-width:400px) {
+    .hero-container .dummy p {
+    font-size: 35px;}
+}
+@media only screen and (min-width:767px) {
+    .hero-container .dummy p {
+    font-size: 39px;}
+}
+@media only screen and (max-width:767px) {
+    .hero .dummy { padding-top: 40.5%;
+    }
+}
+@media only screen and (max-width:400px) {
+    .hero .dummy { padding-top: 38%; 
+    }
+    .hero-container .dummy p {
+    font-size: 24px;}
+}
+
+@media only screen and (min-width:768px) {
+    .hero .dummy { padding-top: 33.33%; }
+    .hero-container .dummy p {
+    font-size: 50px;}
+}
+ 
+@media only screen and (min-width:960px) {
+    .hero .dummy { padding-top: 33.333%; }
+}
+ 
+@media only screen and (min-width:1200px) {
+    .hero .dummy { padding-top: 30%; }
+}
+
+
+/*-----------------------------------------------------
+                ABOUT US PAGE
+--------------------------------------------------------*/
+
+
+
+.members {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    text-align: center;
+    padding-top: 70px;
+    padding-bottom: 97px;
+}
+.member{
+    padding: 20px;
+}
+.members .review-image {
+    padding: 1px;
+}
+@media screen and (max-width: 460px){
+    .header h1{
+        font-size: 70px;
+    }
+}
+
+
+
+
+

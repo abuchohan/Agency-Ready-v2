@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<title>Eat eat eat</title>
+<h2>Dishes</h2>
+<link href="http://55060509.webdevmmu.uk/style-guide/global.css" rel="stylesheet" type="text/css" />
+
+ <input type="button" id="weekdaybutton" value="Weekday Menu">
+  <input type="button" id="saturdaybutton" value="Saturday's Menu">
+   <input type="button" id="sundaybutton" value="Sunday's Menu">
+<ul id="person"></ul>
+<script>
+  
+var today = new Date();
+var day = today.getDay();
+var request = new XMLHttpRequest();
+
+if (day == 0) {
+    request.open("GET", "sundaydishes.json");
+	console.log("today is sunday");
+} else if (day == 6) {
+    request.open("GET", "saturdaydishes.json");
+	console.log("today is saturday");
+} else { 
+    request.open("GET", "weekdaydishes.json");
+	console.log("today is a weekday");
+}
+request.onreadystatechange = function displayMenu() {
+var dishes = JSON.parse(request.responseText);
+	var output = " ";
+	for (var key in dishes) {
+	output += "<li> <em>" + key + "</em>  </br> " + dishes[key]["Description"]  + ", £" + dishes[key]["Price"] + " </li>";
+	}	
+    var update = document.getElementById('person');
+	update.innerHTML = output;
+	} 
+request.send();
+
+
+    sundaybutton.addEventListener("click", function() {
+	loadMenu("sundaydishes.json");
+	}
+	);
+	saturdaybutton.addEventListener("click", function () {
+	loadMenu("saturdaydishes.json") 
+	}
+	);
+	weekdaybutton.addEventListener("click", function () {
+	loadMenu("weekdaydishes.json")
+	}
+	);
+	
+function loadMenu(json_file) {
+console.log(json_file);
+     request.open("GET", json_file);
+request.onreadystatechange = function displayMenu() {
+	if ((request.readyState===4) && (request.status===200)) {
+	var dishes = JSON.parse(request.responseText);
+	var output = " ";
+	for (var key in dishes) {
+	output += "<li> <em>" + key + "</em>, " + dishes[key]["Description"]  + ", £" + dishes[key]["Price"] + " </li>";
+	}
+	var update = document.getElementById('person');
+	update.innerHTML = output;
+	}
+} 
+request.send();
+} 
+
+// debug
+console.log(day);
+console.log(today);
+
+</script>
+<body>
+
+</br>
+</br>
+</br>
+
+<img src="images/image-1.jpg" id="mainImage">
+<script>
+//slide show image script
+var myImage = document.getElementById("mainImage");
+var imageArray = ["images/image-1.jpg","images/image-2.jpg","images/image-3.jpg","images/image-4.jpg","images/image-5.jpg"];
+var imageIndex = 0;
+function changeImage() {
+myImage.setAttribute("src",imageArray[imageIndex]);
+imageIndex++;
+if (imageIndex >= imageArray.length) {
+imageIndex = 0;
+} }
+var intervalHandle = setInterval(changeImage, 5000);
+// onclick stop images from changing
+myImage.onclick = function() {
+	clearInterval(intervalHandle);
+};
+
+</script>
+</body>
